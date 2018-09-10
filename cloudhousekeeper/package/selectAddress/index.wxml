@@ -1,0 +1,41 @@
+<!--package/selectAddress/index.wxml-->
+<view class='addressPage'>
+    <view class='hotAddress'>
+        <view class='tit'>热门地区</view>
+        <view class='hot' bindtap='querySeach' data-province="330000" >浙江省</view>
+        <view class='hot' bindtap='querySeach' data-province="310000" >上海</view>
+        <view class='hot' bindtap='querySeach' data-province="110000" >北京</view>
+        <view class='hot' bindtap='querySeach' data-province="440000" >广东省</view>
+        <view class='hot' bindtap='querySeach' data-province="320000" >江苏省</view>
+        <view class='hot' bindtap='querySeach' data-province="340000" >安徽省</view>
+    </view>
+
+    <view class='allAddress'>
+        <!--地区选择title  -->
+        <view class='checked'>
+            <view class="{{show1?'y':''}}" bindtap='tips' data-index="0" >{{choose1.text}}</view>
+            <view class="{{show2?'y':''}}" bindtap='tips' data-index="1" >{{choose2.text}}</view>
+            <view class="{{show3?'y':''}}" bindtap='tips' data-index="2" >{{choose3.text}}</view>
+        </view>
+        <!-- 选择器 -->
+        <view class='list' wx:if="{{show1}}" >
+             <view wx:for="{{addressList1}}" class="{{index===choose1.index?'ch':''}}"  bindtap='choose1' data-index="{{index}}" data-value="{{item.value}}" data-text="{{item.text}}" wx:key="{{index}}">
+                  <text style='float:left'>{{item.text}}</text>
+                  <i-icon type="right" size="16" style='float:left' color="rgb(46, 160, 255)" wx:if="{{index===choose1.index}}" />
+              </view>
+        </view>
+        <view class='list' wx:if="{{show2}}">
+             <view wx:for="{{addressList2}}" class="{{index===choose2.index?'ch':''}}"  bindtap='choose2' data-index="{{index}}" data-value="{{item.value}}" data-text="{{item.text}}" wx:key="{{index}}" >
+                    <text style='float:left'>{{item.text}}</text>
+                     <i-icon type="right" size="16" style='float:left' color="rgb(46, 160, 255)" wx:if="{{index===choose2.index}}" />
+              </view>
+        </view>
+
+         <view class='list' wx:if="{{show3}}">
+             <view wx:for="{{addressList3}}" class="{{index===choose3.index?'ch':''}}"  bindtap='choose3' data-index="{{index}}" data-value="{{item.value}}" data-text="{{item.text}}" wx:key="{{index}}" >
+                    <text style='float:left'>{{item.text}}</text>
+                     <i-icon type="right" size="16" style='float:left' color="rgb(46, 160, 255)" wx:if="{{index===choose3.index}}" />
+              </view>
+        </view>
+    </view> 
+</view>

@@ -1,0 +1,146 @@
+/* packageMy/search/index.wxss */
+page{
+  font-size: 32rpx;
+}
+/* 清楚浮动 */
+.clearfix:after,.clearfix:before{
+  content:" ";/*加一段内容*/
+  display:table;/*创建匿名的表格单元，触发bfc*/
+}
+.clearfix:after{
+  clear:both;/*清除浮动*/
+ }
+.clearfix{zoom:1;/*为IE6，7的兼容性设置*/}
+
+.header{
+  padding: 20rpx;
+}
+.header .search-input{
+  border:1rpx solid #f5f5f5;
+  padding: 10rpx 100rpx 10rpx 30rpx;
+  border-radius: 40rpx;
+  position: relative;
+}
+.clear{
+  position: absolute;
+  top: 10rpx;
+  right: 30rpx;
+}
+.clear image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.address{
+  margin: 30rpx 0;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+}
+.address .title .bbc{
+  display:inline-block !important;
+  display:inline; 
+  border-bottom: 6rpx solid #d6d6d6;
+  color: #999999;
+}
+.content{
+  margin-top: 20rpx
+}
+.content .list {
+  display: flex;
+}
+.content .list .className{
+  flex: 1;
+  flex-basis: 0%;
+  padding: 20rpx 0;
+  text-align: center;
+  color: #999999
+}
+.content .list .keyName{
+  margin-right: -10rpx;
+  flex: 6;
+  overflow: hidden;
+}
+.content .list .keyName .valName{
+  float: left;
+  width: calc(100%/5 - 20rpx);
+  background: #f5f5f5;
+  text-align: center;
+  padding: 10rpx 0;
+  margin: 10rpx 10rpx 10rpx 0;
+  border-radius: 4rpx;
+}
+/* 搜索结果 */
+.res-search{
+  position: absolute;
+  background: #f5f5f5;
+  top: 140rpx;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+.res-search .item{
+  background: #ffffff;
+}
+.res-search .item .css_index_item{
+  margin: 0 30rpx;
+  border-bottom:1rpx solid #F6F6F6;
+  padding: 20rpx;
+  font-size: 34rpx;
+}
+.res-search .item:last-child .css_index_item{
+  border-bottom:none;
+} 
+.res-search .item .css_index_item .top{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between */
+}
+.res-search .item .css_index_item .top .name{
+  margin-right: 20rpx
+}
+.res-search .item .css_index_item .top .deft{
+  display: flex;
+  align-items: center;
+  margin-right:auto;
+}
+.res-search .item .css_index_item .top .deft .badge{
+  background: #2E9FFB;
+  color:#ffffff;
+  padding: 4rpx 20rpx;
+  font-size: 24rpx;
+  display: unset;
+  border-radius: 50rpx;
+}
+.res-search .item .css_index_item .top .tel{
+  flex-basis: 50%;
+  text-align: right;
+}
+.res-search .item .css_index_item .mid{
+  margin-top: 20rpx;
+  color: #666666
+}
+.res-search .item .css_index_item .buttom{
+  color: #666666;
+  display: flex;
+  align-items: center;
+}
+.res-search .item .css_index_item .buttom .l{
+  margin-right: auto;
+}
+.res-search .item .css_index_item .buttom .r .img{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 搜索没有结果 */
+
+.no-res-search{
+  position: absolute;
+  top: 140rpx;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+}

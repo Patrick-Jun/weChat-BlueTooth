@@ -1,8 +1,0 @@
-{
-  "navigationBarBackgroundColor": "#1f9eff",
-  "navigationBarTitleText": "群发状态",
-  "navigationBarTextStyle": "#fff",
-  "usingComponents":{
-    "send-over":"/components/sendover/sendover"
-  }
-}

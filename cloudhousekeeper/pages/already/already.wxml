@@ -1,0 +1,214 @@
+<!--pages/already/already.wxml-->
+<view class='alreadyBox'>
+  <view class='alreadyTop' id='mjltest'>
+    <view class='leftTab'>
+      <i-tabs current="{{ current }}" bindchange="handleChange">
+        <i-tab key="tab1" title="已打包裹"></i-tab>
+        <i-tab key="tab2" title="打印记录"></i-tab>
+      </i-tabs>
+    </view>
+    <view class='rightTab'>
+      <i-icon type="search" size="28" color="#80848f" bindtap='search' />
+    </view>
+    <view class='bottomTab' wx:if="{{(current=='tab1'&&list.length>0)||(current=='tab2'&&list2.length>0)}}">
+      <view class='batch' wx:if="{{current=='tab2'}}" bindtap='batchChiose'>
+        <image src='/images/pend/ic-piliangxuanze@2x.png'></image>
+        <text>{{chiose?'取消':'批量选择'}}</text>
+      </view>
+      <view>共{{current=='tab1'?list.length:list2.length}}条记录</view>
+      <view class='filter' bindtap='filter' >
+        <text class='{{(time_index==-1&&printPlatform_index==-1&&type_index==-1)?"":"picthon"}}' >筛选</text>
+        <image src='/images/pend/ic-shaixuan@2x.png' style='top:0'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 已打包裹 -->
+  <view class='already {{list.length>0?"":"noalready"}}' wx:if="{{current=='tab1'}}" style="height:{{second_height}}px">
+    <view class='list' wx:for="{{list}}" wx:if="{{list.length>0}}"  bindtap='showDetailOne' data-index="{{index}}" >
+      <image src='/images/pend/changtiao@2x.png' class='topline'></image>
+      <view class='surface'>
+        <i-cell title="2018-7-25 15:20" i-class="tips">
+          <!-- <switch slot="footer" checked /> -->
+          <view slot="footer" class='from'>
+            来自
+            <image src='/images/ic-dianzimiandan@2x.png'></image>
+            刘(ranman)
+          </view>
+        </i-cell>
+        <view class="line"></view>
+        <i-cell i-class="tip2" title="韵达快递 3397758096275">
+          <image class='i-img' src="/images/pend/ic-kuaidiche@2x.png" slot="icon"></image>
+        </i-cell>
+        <i-cell i-class="tip3" title="彩卷" value="13586696788">
+          <image class='i-img' src="/images/pend/ic-shou@2x.png" slot="icon"></image>
+        </i-cell>
+        <i-cell i-class="tip3 tip4" title="上海 上海市 浦东校区">
+          <image class='i-img' slot="icon"></image>
+        </i-cell>
+        <i-cell i-class="tip3 tip4" title="上海市浦东新区莲园路738路55号">
+          <image class='i-img' slot="icon"></image>
+        </i-cell>
+        <i-cell i-class="tip3 tip5" title="T恤e、XXL、黑色">
+          <image class='i-img' src="/images/pend/ic-zhankai@2x.png" slot="icon"></image>
+        </i-cell>
+        <view class="line"></view>
+         <!-- 默认隐藏，点击打开 -->
+        <view class="sendBox" wx:if="{{index==listShow}}">
+            <i-cell i-class="tip3" title="彩卷" value="13586696788">
+                <image class='i-img' src="/images/ic-jijian@2x.png" slot="icon"></image>
+            </i-cell>
+            <i-cell i-class="tip3 tip4" title="上海 上海市 浦东校区">
+              <image class='i-img' slot="icon"></image>
+            </i-cell>
+            <i-cell i-class="tip3 tip4" title="上海市浦东新区莲园路738路55号">
+              <image class='i-img' slot="icon"></image>
+           </i-cell>
+            <view class="line"></view>
+            <view class='sendMessage'>
+                 <view><text class='title'>包裹ID:</text><text>153232323515121</text><text class='tr'>品类:<text class='value'>鞋子</text></text></view>
+                 <view><text class='title'>创建时间:</text><text>2018-08-01 15：00</text></view>
+                 <view><text class='title'>批次号:</text><text>2911414227</text></view>
+                 <view><text class='title'>打印类型:</text><text>自己打印</text></view>
+                 <view><text class='title'>创建人:</text><text>ranman</text><text class='tr'>打印人:<text class='value'>王二</text></text></view>
+            </view> 
+        </view>
+        
+        <button class='check' catchtap='checkLogistics'>查看物流</button>
+        <button class="share">分享物流</button>
+      </view>
+      <image class='sign' src='/images/pend/yidayin@2x.png'></image>
+       
+    </view>
+    <view class='noMessage' wx:if="{{list.length>0}}" >没有更多数据，仅保留90天的数据</view>
+    <view class='noList' wx:if="{{list.length==0}}">
+          <image src='/images/pend/kong@2x.png' class='kongImage' ></image>
+          <view>无打印记录</view>
+    </view>
+  </view>
+  <!--打印记录  -->
+  <view class='log' wx:if="{{current=='tab2'}}" style="height:{{second_height}}px">
+     <checkbox-group bindchange="checkboxChange"  >
+        <view class='list list2' wx:for="{{list2}}"  > 
+          <image src='/images/pend/changtiao@2x.png' class='topline'></image>     
+          <i-cell title="2018-7-25 15:20" i-class="tips">
+              <!-- 选择 -->
+              <checkbox slot="icon" style='vertical-align:middle;' wx:if="{{chiose}}" value="{{index}}" checked="{{item.checked}}"  ></checkbox>
+          </i-cell>
+          <view class="line"></view>
+          <i-cell title="2018-7-25 15:20" value="彩卷"   data-index="{{index}}" bind:click="showDetailTwo" >
+            <image class='i-img' src="/images/pend/ic-kuaidi@2x.png" slot="icon" wx:if="{{index!=list2Show}}" ></image>
+            <image class='i-img' src="/images/pend/ic-kuaidiche@2x.png" slot="icon" wx:if="{{index==list2Show}}" ></image>
+          </i-cell>
+
+          <!-- 隐藏模块 -->
+          <view class='logHistory' wx:if="{{index==list2Show}}" data-index="{{index}}" bindtap='showDetailTwo' >
+            <i-cell i-class="tip3" title="彩卷" value="13586696788">
+              <image class='i-img' src="/images/pend/ic-shou@2x.png" slot="icon"></image>
+            </i-cell>
+            <i-cell i-class="tip3 tip4" title="上海 上海市 浦东校区">
+              <image class='i-img' slot="icon"></image>
+            </i-cell>
+            <i-cell i-class="tip3 tip4" title="上海市浦东新区莲园路738路55号">
+              <image class='i-img' slot="icon"></image>
+            </i-cell>
+            <i-cell i-class="tip3 tip5" title="包裹信息(鞋子、38码、黄色)">
+              <image class='i-img' src="/images/pend/ic-zhankai@2x.png" slot="icon"></image>
+            </i-cell>
+            <view class="line"></view>
+              <i-cell i-class="tip3" title="彩卷" value="13586696788">
+                    <image class='i-img' src="/images/ic-jijian@2x.png" slot="icon"></image>
+                </i-cell>
+                <i-cell i-class="tip3 tip4" title="上海 上海市 浦东校区">
+                  <image class='i-img' slot="icon"></image>
+                </i-cell>
+                <i-cell i-class="tip3 tip4" title="上海市浦东新区莲园路738路55号">
+                  <image class='i-img' slot="icon"></image>
+              </i-cell>
+                <view class="line line2"></view>
+                <view class='sendMessage'>
+                    <view><text class='title'>包裹ID:</text><text>153232323515121</text><text class='tr'>品类:<text class='value'>鞋子</text></text></view>
+                    <view><text class='title'>创建时间:</text><text>2018-08-01 15：00</text></view>
+                    <view><text class='title'>批次号:</text><text>2911414227</text></view>
+                    <view><text class='title'>打印类型:</text><text>自己打印</text></view>
+                    <view><text class='title'>创建人:</text><text>ranman</text><text class='tr'>打印人:<text class='value'>王二</text></text></view>
+                </view> 
+                  <view class="line line2"></view>
+                  <view>
+                      <button class='share' catchtap='printer'>重新打印(原订单)</button>
+                      <button class='share' catchtap='deal'>再次发货</button>
+                      <button class='share' catchtap='recycle'>回收订单</button>
+                  </view>
+          </view>
+
+        </view>
+    </checkbox-group>
+     <view class='noMessage' wx:if="{{list2.length>0}}" >没有更多数据，仅保留90天的数据</view>
+      <view class='noList' wx:if="{{list2.length==0}}">
+            <image src='/images/pend/kong@2x.png' class='kongImage' ></image>
+            <view>无打印记录</view>
+      </view>
+  </view>
+  
+    <view class='bottomBtn' wx:if="{{chiose}}">
+        <view class='btn-left'>
+          <i-radio value="全选"  checked="{{selectAll}}" bindchange="handleAnimalChange"></i-radio>
+        </view>
+        <view class='btn-right' bindtap='printer'>重新打印(原运单)</view>
+    </view>
+
+  <!-- 遮罩层 -->
+  <view class='searchBox' wx:if="{{filterShow}}">
+    <!-- 筛选框 -->
+    <view class='printCondition'>
+      <!-- 筛选条件 可滚动 -->
+      <view class='printBox'>
+        <view class='printTime'>
+          <view class='title'>打印时间:</view>
+          <view class='tag {{time_index==0?"checked":""}}' bindtap='chooseTime' data-time="0" >今日</view>
+          <view class='tag center {{time_index==1?"checked":""}}' bindtap='chooseTime' data-time="1">昨日</view>
+          <view class='tag none'>今日</view>
+          <view class='tag {{time_index==2?"checked":""}}' bindtap='chooseTime' data-time="2" >2018-07</view>
+          <view class='tag center {{time_index==3?"checked":""}}' bindtap='chooseTime' data-time="3" >2018-06</view>
+          <view class='tag {{time_index==4?"checked":""}}' bindtap='chooseTime' data-time="4" >2018-05</view>
+          <view class='tag1 {{(time_index==5||time_index==6)?"checked":""}}'  >
+              <!-- 开始时间 --> <!--bindtap='chooseTime' data-time="5" -->
+              <picker mode="date" value="{{beginTime}}" start="{{threeMonthAgo}}" end="{{toDay}}" bindchange="chooseTime" data-time="5">
+                <view class="picker">
+                   {{beginTime}}
+                </view>
+              </picker>
+
+
+          </view>
+          <view class='center tag2'>-</view>
+          <view class='tag1 {{time_index==6?"checked":""}}'>
+              <picker mode="date" value="{{endTime}}" start="{{threeMonthAgo}}" end="{{toDay}}" bindchange="chooseTime" data-time="6">
+                <view class="picker">
+                   {{endTime}}
+                </view>
+              </picker>
+          </view>
+        </view>
+        <view class='printPlatform'>
+          <view class='title plateau'>筛选平台:</view>
+          <view class='tag {{printPlatform_index==0?"checked":""}}' bindtap='choosePlatform' data-platform="0"  >风火递</view>
+          <view class='tag center disalbe'>有赞</view>
+          <view class='tag disalbe'>拼多多</view>
+          <view class='tag disalbe'>微店</view>
+        </view>
+        <view class='printType'>
+          <view class='title plateau'>打印方式:</view>
+          <view class='tag {{type_index==0?"checked":""}}' bindtap='chooseType' data-type="0" >自己打印</view>
+          <view class='tag center {{type_index==1?"checked":""}}' bindtap='chooseType' data-type="1" >寄件码打印</view>
+          <view class='tag {{type_index==2?"checked":""}}' bindtap='chooseType' data-type="2" >风火递牵牛版</view>
+          <view class='tag {{type_index==3?"checked":""}}' bindtap='chooseType' data-type="3" >打印码打印</view>
+        </view>
+      </view>
+      <!-- 按钮 -->
+      <view class="btn">
+        <button class='noclean {{(time_index==-1&&printPlatform_index==-1&&type_index==-1)?"":"clean"}}' bindtap='cleanFilter'>清空筛选条件</button>
+        <button class='ok' bindtap='done'>完成</button>
+      </view>
+    </view>
+  </view>
+</view>

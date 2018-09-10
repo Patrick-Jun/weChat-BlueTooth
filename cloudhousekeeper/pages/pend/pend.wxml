@@ -1,0 +1,135 @@
+<!--pages/pend.wxml-->
+<view class="header ul clearfix">
+  <view bindtap="batch" class="left li">
+    <image class="myicon" src="../../images/pend/ic-piliangxuanze@2x.png"></image>
+    <span>{{batch}}</span>  
+  </view>
+  <view class="mid li">
+    <span>共3个包裹</span> 
+  </view>
+  <view bindtap="showScreen" class="right li">
+    <span>筛选</span> 
+    <image class="myicon" src="../../images/pend/ic-shaixuan@2x.png"></image>
+  </view>
+</view>
+<!-- 滚动区域 -->
+<scroll-view wx:if="{{ content }}" class="scroll" scroll-y="true" scroll-into-view="" scroll-with-animation="false" enable-back-to-top="false" 
+  bindscrolltoupper="" bindscrolltolower="" bindscroll="" style="height: {{windowHeight}}px;">
+  <view class="content">
+    <view class="list">
+      <image class="myImg" src="../../images/pend/changtiao@2x.png"></image>
+      <view wx:for="{{listData}}" wx:key="index" class="item">
+        <view class="info">
+          <view class="top">
+            <view class="date">
+              <label><checkbox disabled="{{showBatch}}" checked="{{allChecked}}" hidden="{{showBatch}}" class="key" value="{{index}}"></checkbox><view class="val">{{item.date}}</view></label>
+            </view>
+            <view class="from">来自 
+              <image class="myImg" src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/a97fb4c1c0c1c3a89292.jpg"></image>
+              刘(ranman)</view>
+          </view>
+        </view>
+        <view class="content_details">
+          <view class="details" hover-class="none" hover-stop-propagation="false">
+            <view class="img"><image class="myImg" src="../../images/pend/ic-shou@2x.png"></image></view>
+            <view class="username">{{item.name}}</view>
+            <view class="phone">{{item.tel}}</view>
+          </view>
+          <view class="details address">
+            <view class="img"></view>
+            <view class="username">{{item.city}}</view>
+            <view class="phone"></view>
+          </view>
+          <view class="details address">
+            <view class="img"></view>
+            <view class="username">{{item.address}}</view>
+            <view class="phone"></view>
+          </view>
+          <view class="details thing" hover-class="none" hover-stop-propagation="false">
+            <view class="img"><image class="myImg" src="../../images/pend/ic-shou@2x.png"></image></view>
+            <view class="username">{{item.wp_name}}、{{item.size}}、{{item.color}}</view>
+            <view class="phone"></view>
+          </view>
+        </view>
+        <view class="operation">
+          <view class="bu"></view>
+          <view class="left">编辑</view>
+          <view class="right">
+            <view class="see">查看包裹码</view>
+            <view class="open">打印快递单</view>
+          </view>
+        </view>
+        <image class="myImg" src="../../images/pend/changtiao@2x.png"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 加载更多 -->
+  <view class="up" hidden="{{up}}">
+    没有更多数据，仅保存90天内的数据
+  </view>
+</scroll-view>
+
+<!-- 批量选择操作 -->
+<view class="batch" hidden="{{ showBatch }}">
+  <view class="all">
+    <i-checkbox i-class="myCheckbox" value="全选" checked="{{allChecked}}" bindchange="allSelect">
+    </i-checkbox>
+  </view>
+  <view class="generate">
+    生成寄件码
+  </view>
+  <view bindtap="BatchPrinting" class="batch_printing">
+    批量打印
+  </view>
+</view>
+<!-- 筛选 -->
+<view hidden="{{screen}}" class="screen-div">
+  <!-- 遮罩层 -->
+  <view class="screen">
+    <!-- 筛选条件 -->
+    <view class="condition">
+      <view class="title">
+        创建时间:
+      </view>
+      <view class="t clearfix">
+        <view class="today left {{ thisTab == 1 ? 'this-tab' : '' }}" data-key="1" bindtap="activeTab">今天</view>
+        <view class="yesterday mid {{ thisTab == 2 ? 'this-tab' : '' }}" data-key="2" bindtap="activeTab">昨天</view>
+        <view class="toMonth right {{ thisTab == 3 ? 'this-tab' : '' }}" data-key="3" bindtap="activeTab">本月</view>
+      </view>
+      <view class="b clearfix">
+        <view class="star left {{ thisTab == 4 ? 'this-tab' : '' }}">
+          <picker mode="date" value="{{date}}" start="1900-01-01" end="2100-12-31" bindchange="selectStarTime">
+            <view class="picker">
+              {{star_time}}
+            </view>
+          </picker>
+        </view>
+        <view class="mid">—</view>
+        <view class="end right {{ thisTab == 5 ? 'this-tab' : '' }}">
+          <picker mode="date" value="{{end_time}}" start="1900-01-01" end="2100-12-31" bindchange="selectEndTime">
+            <view class="picker">
+              {{end_time}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class="btn clearfix">
+      <view bindtap="clearCondition" class="btn-item left {{ thisTab != 0 ? 'btnChecked' : '' }}">
+        清空筛选条件
+      </view>
+      <view bindtap="complete" class="btn-item right">
+        完成
+      </view>
+    </view>
+  </view>
+</view>
+<i-action-sheet visible="{{ visible }}" actions="{{ actions }}" show-cancel bind:cancel="cancel" bind:click="clickItem" />
+<i-toast id="toast" />
+<!-- 空数据 -->
+<view wx:if="{{ !content }}" class="kong">
+  <view class="">
+    <image class="" src="../../images/pend/kong@2x.png"></image>
+    <view style="margin-top:20rpx">无待打包裹</view>
+  </view>
+</view>

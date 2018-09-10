@@ -1,0 +1,23 @@
+var cities = [
+{
+	pinyin:B,
+	name:"冰心少年",
+	key:1
+},{
+	pinyin:Y,
+	name:"迎宾",
+	key:2
+},{
+	pinyin:D,
+	name:"邓颖冰",
+	key:3
+},{
+	pinyin:C,
+	name:"常欢乐",
+	key:4
+},{
+	pinyin:B,
+	name:"冰心少年",
+	key:5
+}
+]

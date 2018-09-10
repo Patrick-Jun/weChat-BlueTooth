@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "新建包裹",
+  "backgroundColor":"#f5f5f5",
+  "usingComponents": {
+      "i-cell": "../../dist/cell/index",
+      "icon":"../../dist/icon/index",
+      "i-input": "../../dist/input/index",
+      "i-switch": "../../dist/switch/index",
+      "i-input-number": "../../dist/input-number/index"
+  }
+}

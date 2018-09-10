@@ -1,0 +1,58 @@
+<!--pages/blueTooth/index.wxml-->
+<view>
+  <image src='/images/banner1.jpg' class='logo'></image>
+
+  <view class='noBluetooth' wx:if="{{!hasBlueTooth}}">
+    <view class='noBlueToothTop'>
+      <image src='/images/package/ic-zhuyi@2x.png'></image>
+      您还没有添加打印机信息
+    </view>
+    <view class='noBlueToothBottom'>
+      <view class='quest'>
+        <image src='/images/package/ic-ruhe@2x.png'></image>
+        <text>如何添加打印机？</text>
+      </view>
+      <view class='answer'>
+        <view style='float:left;width:5%;font-size:64rpx;'>·</view>
+        <text style='float:right;width:95%;'>点击页面下方“搜素打印机”通过手机蓝牙搜索附近的蓝牙打印机，添加成功后使用</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='hasBluetooth' wx:if="{{hasBlueTooth}}">
+    <i-cell i-class="tip2" title="已添加的打印机">
+      <image class='i-img' src="http://img2.imgtn.bdimg.com/it/u=4075250394,790748934&fm=27&gp=0.jpg" slot="icon"></image>
+    </i-cell>
+    <view class='list'>
+      <view class='items' wx:for="{{list}}">
+        <i-cell i-class="tip" title="{{item.remark==''?item.name:item.remark}}" isLink bind:click="handleOpen2" data-item="{{item}}" data-index="{{index}}">
+          <image class='i-img' src="http://img2.imgtn.bdimg.com/it/u=4075250394,790748934&fm=27&gp=0.jpg" slot="icon"></image>
+          <text class='moren' wx:if="{{item.defaultSet}}">默认</text>
+        </i-cell>
+        <view class='line'></view>
+        <i-cell i-class="moban" title="模板设置" value="模板自动选择" isLink>
+          <image class='i-img' slot="icon"></image>
+        </i-cell>
+      </view>
+    </view>
+  </view>
+
+  <button class='searchBlueTooth' bindtap='toSearch'>搜索添加打印机</button>
+
+
+  <i-action-sheet visible="{{ visible2 }}" actions="{{ actions2 }}" show-cancel bind:cancel="handleCancel2" bind:click="handleClickItem2" mask-closable="{{ false }}">
+
+  </i-action-sheet>
+
+  <i-modal title="编辑打印备注" visible="{{ visible1 }}" bind:ok="handleOk" bind:cancel="handleClose1">
+    <input placeholder='请输入' bindinput='setName' focus:true ></input>
+    
+  </i-modal>
+</view>
+ 
+
+  
+
+  
+
+

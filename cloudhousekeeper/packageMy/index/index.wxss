@@ -1,0 +1,34 @@
+/* packageMy/index/index.wxss */
+.container{
+  background: #F5F5F5;
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  bottom: 0;
+}
+.header{
+  padding: 40rpx 0 30rpx;
+  background: #fff;
+  text-align: center
+}
+.header .img{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 160rpx
+}
+.list{
+  margin-top: 40rpx;
+  font-size: 18rpx;
+}
+.list .left-icon{
+  line-height: 1;
+  font-size: 18rpx;
+}
+.list .left-icon .cell-index--i-cell-ft{
+  font-size: 34rpx;
+  color: #9C9C9C;
+}
+.list .left-icon .cell-index--i-cell-text{
+  font-size: 34rpx
+}

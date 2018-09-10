@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "选择收件人",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index",
+    "i-index": "../../dist/index/index",
+    "i-index-item": "../../dist/index-item/index",
+    "i-action-sheet": "../../dist/action-sheet/index",
+    "i-message": "../../dist/message/index",
+    "i-spin": "../../dist/spin/index"
+  } 
+}

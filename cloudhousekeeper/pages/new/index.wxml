@@ -1,0 +1,148 @@
+<!--pages/index/newPackage/index.wxml-->
+<view class='newPackageBox'>
+  <view class='isFormMe' wx:if="{{!isMe}}">
+    <image class='line' src='../../images/pend/changtiao@2x.png'></image>
+    <view>
+      <i-cell i-class="left-icon head-text" title="保存并将包裹提交给" url="/package/choosePartner/index" isLink="true">
+        ranman
+        <image class='head-icon' src="http://img2.imgtn.bdimg.com/it/u=4075250394,790748934&fm=27&gp=0.jpg" slot="icon"></image>
+      </i-cell>
+    </view>
+  </view>
+  <view>
+    <image class='line' src='../../images/pend/changtiao@2x.png'></image>
+    <view class='sendDetail'>
+      <i-cell i-class="left-icon" title="寄件信息" value="新建" only-tap-footer bind:click="toNewSend" >
+        <image class='i-img' src="../../images/package/ic-ji@2x.png" slot="icon"></image>
+      </i-cell>
+      <!-- 暂无寄件人 -->
+      <view class='sendBottom' wx:if="{{!haveSend}}">还未设置寄件人信息
+        <text bindtap='toNewSend' >去设置</text>
+      </view>
+      <!-- 有寄件人 -->
+      <view class='sendBottom' wx:if="{{haveSend}}">
+        <i-cell title="{{sendPerson.name}}" i-class="sendPerson" value="{{sendPerson.tel}}"></i-cell>
+        <i-cell title="{{sendPerson.company}}" i-class="address" is-link>
+          <view>
+            {{sendPerson.province.text1}}{{sendPerson.province.text2}}{{sendPerson.province.text3}} {{sendPerson.address}}
+          </view>
+        </i-cell>
+      </view>
+    </view>
+  </view>
+  <view>
+    <image class='line' src='../../images/pend/changtiao@2x.png'></image>
+    <view class='addresseeDetail'>
+      <!-- 收件信息编辑模式 -->
+      <view class='editAddress' wx:if="{{!isImport}}">
+        <i-cell i-class="left-icon" title="收件信息" value="智能黏贴">
+          <image class='i-img' src="../../images/package/ic-shou@2x.png" slot="icon" ></image>
+        </i-cell>
+        <i-input value="{{ recipients.name }}" title="姓名" i-class='form'  placeholder="收件人姓名" maxlength='10' />
+        <image src='../../images/package/ic-xinxi@2x.png' class='i-img user' bindtap='toUser' ></image>
+        <i-input value="{{ recipients.tel }}" type="number" i-class='form' title="电话" placeholder="手机号或座机号" />
+        <i-input value="{{recipients.province.text1}}{{recipients.province.text2}}{{recipients.province.text3}}" title="地区" i-class='form' placeholder="选择省、市、区" disabled bindtap='toSelect' />
+        <i-input value="{{ recipients.address }}" type="textarea" i-class='form' title="详细地址" placeholder="请输入详细地址(最多50字)" maxlength="50" />
+      </view>
+      <!-- 收件信息导入模式 -->
+      <view class='sendAddress' wx:if="{{isImport}}">
+        <i-cell i-class="left-icon" title="收件信息">
+          <image class='i-img' src="../../images/package/ic-xinxi@2x.png" slot="icon"></image>
+        </i-cell>
+        <!-- 收件头部 -->
+        <i-cell i-class="left-icon sendListHead" title="已选3个收件人">
+          <image class='i-img' slot="icon"></image>
+          <image class='i-img i-img-r' src="../../images/package/ic-xinxi@2x.png"></image>
+        </i-cell>
+        <!-- 收件列表 -->
+        <view class='userlist'>
+          <view class='sendAddress-bottom'>
+            <i-cell i-class="left-icon sendName" title="孙阳" value="121212">
+              <image class='i-img-right i-img' src="../../images/package/ic-shanchu@2x.png"></image>
+            </i-cell>
+            <i-cell title="腾讯可以股份" i-class="address">
+              <view>腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份</view>
+            </i-cell>
+          </view>
+          <view class='sendAddress-bottom'>
+            <i-cell i-class="left-icon sendName" title="孙阳" value="121212">
+              <image class='i-img-right i-img' src="../../images/package/ic-shanchu@2x.png"></image>
+            </i-cell>
+            <i-cell title="腾讯可以股份" i-class="address">
+              <view>腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份</view>
+            </i-cell>
+          </view>
+          <view class='sendAddress-bottom'>
+            <i-cell i-class="left-icon sendName" title="孙阳" value="121212">
+              <image class='i-img-right i-img' src="../../images/package/ic-shanchu@2x.png"></image>
+            </i-cell>
+            <i-cell title="腾讯可以股份" i-class="address">
+              <view>腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份</view>
+            </i-cell>
+          </view>
+          <view class='sendAddress-bottom'>
+            <i-cell i-class="left-icon sendName" title="孙阳" value="121212">
+              <image class='i-img-right i-img' src="../../images/package/ic-shanchu@2x.png"></image>
+            </i-cell>
+            <i-cell title="腾讯可以股份" i-class="address">
+              <view>腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份腾讯可以股份</view>
+            </i-cell>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <image class='line' src='../../images/pend/changtiao@2x.png'></image>
+    <view class='itemType'>
+      <i-cell i-class="left-icon" title="物品类型" value="{{itemTypeContext}}" is-link bindtap="handleItemtype">
+        <image class='i-img' src="../../images/package/ic-wupinleixing@2x.png" slot="icon"></image>
+      </i-cell>
+      <i-input value="{{ value5 }}" placeholder="请填写包裹备注信息(选填)" i-class='form' />
+    </view>
+  </view>
+  <view>
+    <image class='line' src='../../images/pend/changtiao@2x.png'></image>
+    <view class='batchSend'>
+      <i-cell title="批量寄件" i-class="left-icon">
+        <i-switch value="{{switch1}}" bind:change="onChange" slot="footer" size="small"></i-switch>
+        <image class='i-img' src="../../images/package/ic-pinliangjijian@2x.png" slot="icon"></image>
+      </i-cell>
+      <view wx:if="{{!switch1}}">
+        <i-cell title="开启批量寄件后，打印多张电子面单" i-class="text-content"></i-cell>
+      </view>
+      <view class='batchSend-view' wx:if="{{switch1}}">
+        <text>包裹数量(面单数量):</text>
+        <i-input-number value="{{ value2 }}" min="0" max="100" step="1" bindchange="handleChange2" i-class="changeNum" size="small" />
+      </view>
+    </view>
+  </view>
+</view>
+<view class='bottom'>
+  <view wx:if="{{isMe}}">
+    <view class='t1'>直接打印</view>
+    <view class='t1 t3'>保存包裹</view>
+  </view>
+  <view wx:else>
+    <view class='t2'>保存包裹</view>
+  </view>
+  <view class='itemBox' wx:if="{{itemType}}">
+    <view class='itemTypeList'>
+      <view class='itemList-top'>
+        <view class='cancel' bindtap='handleItemtype'>取消</view>
+        <view class='context'>选择物品类型</view>
+      </view>
+      <view class='itemList-bottom'>
+        <view bindtap='setType' data-type="服饰">服饰</view>
+        <view bindtap='setType' data-type="鞋靴">鞋靴</view>
+        <view bindtap='setType' data-type="配饰">配饰</view>
+        <view bindtap='setType' data-type="箱包">箱包</view>
+        <view bindtap='setType' data-type="生活用品">生活用品</view>
+        <view bindtap='setType' data-type="数码用品">数码用品</view>
+        <view bindtap='setType' data-type="食品">食品</view>
+        <view bindtap='setType' data-type="文件">文件</view>
+        <view bindtap='setType' data-type="其他">其他</view>
+      </view>
+    </view>
+  </view>
+</view>

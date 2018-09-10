@@ -1,0 +1,40 @@
+<!--packageMy/myAddress/index.wxml  我的地址-->
+
+<view class="index-list">
+  <i-index height="100%" bind:change="onChange">
+      <i-index-item 
+          i-class="index-item-parent"
+          wx:for="{{ cities }}" 
+          wx:for-index="index" 
+          wx:key="{{index}}" 
+          wx:if="{{item.list.length > 0}}"
+          wx:for-item="item" name="{{item.key}}">
+          <view 
+              class="i-index-demo-item index-item" 
+              wx:for="{{item.list}}" 
+              wx:for-index="in" 
+              wx:key="{{in}}" 
+              wx:for-item="it">
+              <view class="css_index_item">
+                <view class="top">
+                  <view class="name">
+                    <label>
+                      <checkbox name="radios" disabled="{{showBatch}}" hidden="{{showBatch}}" class="key" value="{{in}}"></checkbox>
+                       <image class="myImg" src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/a97fb4c1c0c1c3a89292.jpg"></image>
+                      <view class="val">蔡娟</view>
+                      <view wx:if="{{index == 0 && in == 0}}" class="badge">（本人）</view>
+                    </label>
+                  </view>
+                  <view bindtap="openSelect" class="cz">
+                    <image class="cz-img" src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/a97fb4c1c0c1c3a89292.jpg"></image>
+                  </view>
+                </view>
+              </view>
+          </view>
+    </i-index-item>
+    <i-index-item name="亲，没有数据了～" style="text-align:center;padding:20rpx 0;"></i-index-item>
+  </i-index>
+  <i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin>
+</view>
+<i-action-sheet visible="{{ visible }}" actions="{{ actions }}" show-cancel bind:cancel="cancel" bind:click="selectBtn" />
+<i-message id="message" />

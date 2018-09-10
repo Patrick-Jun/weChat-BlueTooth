@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "搜索",
+  "usingComponents": {
+    "i-spin": "../../../dist/spin/index",
+    "i-icon": "../../../dist/icon/index",
+    "i-action-sheet": "../../../dist/action-sheet/index",
+    "i-message": "../../../dist/message/index"
+  } 
+}

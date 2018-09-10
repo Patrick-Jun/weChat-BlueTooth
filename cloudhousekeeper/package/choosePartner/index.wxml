@@ -1,0 +1,19 @@
+<!--package/choosePartner/index.wxml-->
+<view class="i-index-demo">
+  <i-index height="100%" bind:change="onChange">
+   <radio-group>
+      <i-index-item wx:for="{{ cities }}" wx:for-index="index" wx:key="{{index}}" wx:for-item="item" name="{{item.key}}">
+        <view class="i-index-demo-item" style='background-color:#fff' wx:for="{{item.list}}" wx:for-index="in" wx:key="{{in}}" wx:for-item="it">
+          <label class='radio'>
+            <radio>
+              <image src='' class='headIcon'></image>
+              {{it.name}}
+            </radio>
+          </label>
+          <image src='/images/package/ic-gengduo@2x.png' class='more' ></image>
+        </view>
+      </i-index-item>
+   </radio-group>
+  
+  </i-index>
+</view>

@@ -1,0 +1,29 @@
+/* package/faceBillApply/index.wxss */
+page{
+  background: #f5f5f5;
+}
+.stepBox{
+  padding: 50rpx 0 50rpx 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #fff;
+}
+.stepBox .step .step-index--i-step-ico{
+  background: #DBDBDB;
+}
+image{
+  width: 35rpx;
+  height: 35rpx;
+  margin: 0 15rpx;
+  position: relative;
+}
+.link{
+  padding: 5rpx 20rpx;
+  border: 1rpx solid rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+  border-radius: 10rpx;
+}
+#myVideo{
+  width: 90%;
+  margin-left: 5%;
+}

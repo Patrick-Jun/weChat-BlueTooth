@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "待打包裹",
+  "enablePullDownRefresh":true,
+  "backgroundColor":"#f5f5f5",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index",
+    "i-load-more": "../../dist/load-more/index",
+    "i-checkbox-group": "../../dist/checkbox-group/index",
+    "i-checkbox": "../../dist/checkbox/index",
+    "i-action-sheet": "../../dist/action-sheet/index",
+    "i-toast": "../../dist/toast/index"
+  }
+}

@@ -1,0 +1,344 @@
+/* pages/pend.wxss */
+page{
+  font-size: 32rpx;
+  height: 100%;
+  background: #F5F5F5;
+}
+/* 清楚浮动 */
+.clearfix:after,.clearfix:before{
+  content:" ";/*加一段内容*/
+  display:table;/*创建匿名的表格单元，触发bfc*/
+}
+.clearfix:after{
+  clear:both;/*清除浮动*/
+ }
+.clearfix{zoom:1;/*为IE6，7的兼容性设置*/}
+/* 头部菜单 */
+.header{
+  border-top: 1rpx solid #FAFAFA;
+  border-bottom: 1rpx solid #FAFAFA;
+  padding: 10rpx 0;
+  color: #373839;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+  background: #fff;
+}
+.ul .li{
+  float: left;
+  width: calc(100%/3);
+  text-align: center;
+  line-height: 60rpx;
+  vertical-align: middle
+}
+.ul .li .myicon,.ul .li span{
+  vertical-align: middle;
+}
+.ul .left .myicon{
+  margin-right: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.ul .right .myicon{
+  margin-left: 10rpx;
+  width: 34rpx;
+  height: 20rpx;
+}
+.scroll{
+  background: #ffffff
+}
+.content{
+  margin-top: 88rpx
+}
+.content .list .myImg{
+  height: 6rpx;
+  width: 100%;
+}
+.up {
+  font-size: 28rpx;
+  padding: 40rpx 0;
+  color: #A3A3A3;
+  text-align: center;
+  background: #F5F5F5
+}
+.content .list .item .info .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 34rpx;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #F9F9F9;
+  font-size: 30rpx;
+}
+.content .list .item .info .top .date{
+  color: #B7B7B7;
+  display: flex;
+}
+.content .list .item .info .top .date label{
+  display: flex;
+}
+.content .list .item .info .top .date label .key{
+  vertical-align: middle;
+}
+.content .list .item .info .top .date label .val{
+  vertical-align: middle;
+  margin-top: 4rpx
+}
+/*  重写 checkbox 样式  */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+  border-radius: 50%;/* 圆角 */
+  width: 40rpx; /* 背景的宽 */
+  height: 40rpx; /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  border: 1rpx solid red;
+  background: red;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 50%;/* 圆角 */
+  width: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size:30rpx; /* 对勾大小 30rpx */
+  color:#fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform:translate(-50%, -50%) scale(1);
+  -webkit-transform:translate(-50%, -50%) scale(1);
+}
+.content .list .item .info .top .from{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end
+}
+.content .list .item .info .top .from .myImg{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50rpx;
+  margin: 0 8rpx;
+}
+.content .list .item .content_details{
+  margin: 0 34rpx;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #F9F9F9;
+}
+.content .list .item .content_details .details{
+  display: flex;
+  align-items: center;
+}
+.content .list .item .content_details .details .img{
+  flex-basis: 8%;
+  flex: 1;
+}
+.content .list .item .content_details .details .username{
+  flex: 6;
+}
+.content .list .item .content_details .details .phone{
+  text-align: right;
+  flex: 2;
+  flex-basis: 10%;
+}
+.content .list .item .content_details .details .img .myImg{
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 50rpx;
+  margin: 0 8rpx;
+  vertical-align: middle;
+}
+.content .list .item .content_details .address{
+  margin-top: 10rpx;
+}
+.content .list .item .content_details .address .username{
+  font-size: 28rpx;
+  color: #696969;
+}
+.content .list .item .content_details .thing .username{
+  color: #949494;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+
+/* 操作 */
+.operation{
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  color: #949494;
+}
+.operation .bu{
+  flex: 1;
+  flex-basis: 3.5%;
+}
+.operation .left{
+  flex: 5;
+}
+.operation .right{
+  flex: 8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.operation .right .see{
+  font-size: 32rpx;
+  border: 1rpx solid #2F9FFB;
+  color: #2F9FFB;
+  padding: 6rpx 10rpx;
+  border-radius: 6rpx;
+}
+.operation .right .open{
+  font-size: 32rpx;
+  border: 1rpx solid #2F9FFB;
+  background: #2F9FFB;
+  color: #ffffff;
+  padding: 6rpx 10rpx;
+  border-radius: 6rpx;
+}
+
+/* 批量操作 */
+.batch{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.batch .all{
+  flex:1.2;
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+}
+.batch .generate{
+  flex: 1.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E07B2F;
+  color: #ffffff;
+  height: 88rpx;
+  font-size: 32rpx;
+}
+.batch .batch_printing{
+  flex: 1.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2F9FFB;
+  color: #ffffff;
+  height: 88rpx;
+  font-size: 32rpx;
+}
+.batch .all .myCheckbox view.checkbox-index--i-checkbox-cell.cell-index--i-cell.cell-index--i-cell-last{
+  padding: 0;
+  height: 88rpx;
+}
+
+/* 筛选 */
+.screen-div{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0,0,0,.3)
+}
+.screen{
+  background: #fff;
+  margin-top: 84rpx;
+  padding: 0 40rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+.screen .title{
+  padding: 20rpx 0;
+}
+.screen .t{
+  overflow: hidden;
+  margin-right: -30rpx
+}
+.screen .t .left,.screen .t .mid,.screen .t .right{
+  box-sizing: border-box;
+  text-align: center;
+  border: 1rpx solid #E9E9E9;
+  float: left;
+  width: calc(100%/3 - 30rpx);
+  margin-right: 30rpx;
+  border-radius: 6rpx;
+  padding: 10rpx 0;
+}
+.screen .b{
+  width: 100%;
+  overflow: hidden;
+  margin-right: -40rpx;
+  padding: 20rpx 0;
+}
+.screen .b .left,.screen .b .right{
+  width: 40%;
+  float: left;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1rpx solid #E9E9E9;
+  border-radius: 6rpx;
+  padding: 10rpx 0;
+}
+.screen .b .mid{
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+.screen .b .this-tab,.screen .t .this-tab{
+  border:1rpx solid #2F9FFB;
+  color: #2F9FFB;
+}
+.btn{
+  padding: 10rpx 0 30rpx;
+  overflow: hidden;
+  margin-right: -20rpx
+}
+.btn .btn-item{
+  box-sizing: border-box;
+  text-align: center;
+  border: 1rpx solid #E9E9E9;
+  float: left;
+  width: calc(100%/2 - 20rpx);
+  margin-right: 20rpx;
+  border-radius: 6rpx;
+  padding: 18rpx 0;
+}
+.btn .left{
+  background: #DBDBDB;
+  border-color: DBDBDB;
+  color:#fff;
+}
+.btn .right{
+  background: #2F9FFB;
+  border-color: #2F9FFB;
+  color:#fff;
+}
+.btn .btnChecked{
+  background: #FC8023;
+  border-color: #FC8023
+}
+
+/* 无待打包裹 */
+.kong{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  color: #A9A9A9;
+}
+.kong image{
+  width: 300rpx;
+  height: 300rpx;
+}

@@ -1,0 +1,68 @@
+<!--pages/already/logistics.wxml-->
+<view>
+    <view class='top'>
+      <image src='/images/pend/changtiao@2x.png' class='topline'></image>
+      <view class='listModule'>
+          <image src='/images/pend/ic-kuaidiche@2x.png'></image>
+          <text>物流状态</text>
+      </view>
+      <view class='tbottom'>
+        <view class='tModule'><text>物流公司</text><text>韵达快递</text></view>
+        <view class='tModule'><text>运单编号</text><text>3977580962785</text></view>
+        <view class='tModule'><text>官方电话</text><text>95546</text></view>
+      </view>   
+    </view>
+    
+    <view class='nav'>
+        <image src='/images/pend/changtiao@2x.png' class='topline'></image>
+         <view class='listModule'>
+            <image src='/images/pend/ic-shou@2x.png' class='other' ></image>
+            <text>王坤</text>
+            <text>13586696811</text>
+            <text>上海上海市普陀区</text>
+        </view>
+         <view class='listModule'>
+            <image src='/images/pend/ic-ji@2x.png' class='other' ></image>
+            <text>rannam</text>
+            <text>13586696811</text>
+            <text>上海上海市普陀区</text>
+        </view>
+    </view>
+
+    <view class='btm'>
+        <image src='/images/pend/changtiao@2x.png' class='topline'></image>
+         <view class='textModule'>
+              <i-cell i-class="tit" title="包裹派送时，微信提醒我">
+                <i-switch value="{{switch1}}" bind:change="onChange" i-class='switch' size="small" slot="footer"></i-switch>
+             </i-cell>
+             <view class='line'></view>
+              <i-cell i-class="tit" title="包裹已签收，微信提醒我">
+                <i-switch value="{{switch1}}" bind:change="onChange" i-class='switch' size="small" slot="footer"></i-switch>
+             </i-cell>
+        </view>
+       
+        <view class='steps'>
+            <view class="timeLine">
+               <view class='rLine'></view>
+               <view class='step'>
+                    <view class='rd checkRd'></view>
+                    <view class='stepTitle'>商家已打印</view>
+                    <view class='stepText'>2018-06-08 10:50</view>
+                </view>
+                <view class='hBox'></view>
+                <view class='step'>
+                  <view class='rd'></view>
+                   <view class='stepTitle'>商家已打印</view>
+                    <view class='stepText'>2018-06-08 10:50</view>
+                </view>
+                      <view class='hBox'></view>
+                 <view class='step'>
+                  <view class='rd'></view>
+                   <view class='stepTitle'>商家已打印</view>
+                    <view class='stepText'>2018-06-08 10:50</view>
+                </view>
+            </view>
+        </view>
+    </view>
+      <view class='btn share'>分享物流</view>
+</view> 

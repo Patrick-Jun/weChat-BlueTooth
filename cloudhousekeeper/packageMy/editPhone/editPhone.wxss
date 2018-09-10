@@ -1,0 +1,72 @@
+/* packageMy/editPhone/editPhone.wxss */
+.container{
+  background: #F5F5F5;
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  bottom: 0;
+}
+.list{
+  margin-top: 40rpx;
+  font-size: 18rpx;
+}
+.list .left-icon{
+  line-height: 1;
+  font-size: 18rpx;
+}
+.list .left-icon .cell-index--i-cell-ft{
+  font-size: 34rpx;
+  color: #9C9C9C;
+}
+.list .left-icon .cell-index--i-cell-text{
+  font-size: 34rpx
+}
+.list i-cell-group .group-index--i-cell-group{
+  border-bottom: 1rpx solid #F5F5F5
+}
+.list i-cell-group:last-child .group-index--i-cell-group{
+  border-bottom: none
+}
+.list i-cell-group .group-index--i-cell-group .input{
+  position:relative;
+  padding:12px 15px;
+  display:flex;
+  background:#fff;
+  align-items:center;
+  line-height:1.4;
+  font-size:30rpx;
+  overflow:hidden;
+}
+.list i-cell-group .group-index--i-cell-group .btn{
+  
+  color: #2E9FFB;
+  font-size: 30rpx;
+  background: #fff;
+  background-color: #fff;
+  border: none;
+  margin: 0;
+  padding: 0;
+  
+}
+.list i-cell-group .group-index--i-cell-group .l{
+  width: 70%;
+}
+.list i-cell-group .group-index--i-cell-group .r{
+  text-align: left;
+  position: absolute;
+  right: 0;
+  line-height: 1;
+  width: 30%;
+}
+.list i-cell-group .group-index--i-cell-group .btn::after{
+  border: none;
+}
+.save{
+  background: #fff;
+  padding: 1rpx;
+}
+.save .my-btn{
+  font-size: 38rpx;
+  background:#2E9FFB !important;
+}

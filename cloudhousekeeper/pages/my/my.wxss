@@ -1,0 +1,51 @@
+/* pages/my.wxss */
+.container{
+  background: #F5F5F5;
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  bottom: 0;
+}
+.user_header{
+  padding: 40rpx 0 30rpx;
+  background: #fff;
+}
+.header{
+  padding-left: 10%
+}
+.img{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 160rpx;
+  vertical-align: middle;
+}
+.userInfo{
+  margin-top: 26rpx;
+}
+.phone{
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  color: #2E9FFC;
+}
+/* 地址 */
+.list{
+  margin-top: 40rpx;
+  font-size: 18rpx;
+}
+.list .i-img{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.list .left-icon{
+  line-height: 1;
+  font-size: 18rpx;
+}
+.list .left-icon .cell-index--i-cell-ft{
+  font-size: 34rpx;
+  color: #4AACFB;
+}
+.list .left-icon .cell-index--i-cell-text{
+  font-size: 34rpx
+}

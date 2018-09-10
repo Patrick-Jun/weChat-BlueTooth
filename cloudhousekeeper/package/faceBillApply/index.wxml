@@ -1,0 +1,29 @@
+<!--package/faceBillApply/index.wxml-->
+<view class='stepBox'>
+  <i-steps current="{{verticalCurrent}}" direction="vertical">
+    <i-step i-class="step">
+      <view slot="title">
+        第一步：
+        <text class="link" bindtap='setClip'>复制链接，在浏览器打开</text>
+      </view>
+    </i-step>
+    <i-step i-class="step">
+      <view slot="title">
+        第二步：用淘宝账号登陆授权<image src='/images/ic-lanyadayin@2x.png'></image>-申请面单
+      </view>
+      <view slot="content">
+        账号（若已有，则无需再申请）
+      </view>
+    </i-step>
+    <i-step i-class="step">
+      <view slot="title">
+        完成：返回小程序自动读取面单账号
+      </view>
+    </i-step>
+  </i-steps>
+
+
+
+   <video id="myVideo" src="" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+
+</view>

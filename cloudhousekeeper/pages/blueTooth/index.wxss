@@ -1,0 +1,97 @@
+/* pages/blueTooth/index.wxss */
+Page{
+  background: #f5f5f5;
+   font-size: 30rpx;
+}
+.logo{
+  width: 100%;
+  height: 280rpx;
+}
+.noBluetooth{
+
+}
+.noBlueToothTop{
+  width: 100%;
+  text-align: center;
+
+  padding: 50rpx 0;
+}
+.noBluetooth image{
+  width: 37rpx;
+  height: 33rpx;
+  position: relative;
+  top: 5rpx;
+  margin: 0 10rpx;
+}
+.noBlueToothBottom{
+  padding: 47rpx 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+  overflow: hidden;
+}
+.quest image{
+  margin: 0 19rpx 0 0;
+}
+
+.answer{
+  margin-top: 58rpx;
+  line-height: 50rpx;
+}
+.searchBlueTooth{
+  position: absolute;
+  bottom: 0;
+  background: rgb(46, 160, 255);
+  color: #fff;
+  width: 100%;
+  border: none;
+  border-radius:0;
+  font-size: 30rpx;
+  line-height: 100rpx;
+}
+.hasBluetooth image{
+   width: 40rpx;
+  height: 40rpx;
+  position: relative;
+}
+.hasBluetooth .tip2{
+  background: #f5f5f5;
+}
+.hasBluetooth .tip{
+  position: relative;
+}
+.hasBluetooth .moren{
+  position: absolute;
+  top: 35rpx;
+  right: 70rpx;
+  float: right;
+  border-radius:40rpx;
+  font-size: 26rpx;
+  padding: 5rpx 20rpx;
+  background: rgb(46, 160, 255);
+  color:#fff;
+}
+.line{
+  width: 90%;
+  margin-left: 5%;
+  border-top: 1rpx solid #f5f5f5;
+  position: absolute;
+  z-index: 100;
+
+}
+.moban .cell-index--i-cell-ft{
+  color: rgb(102, 102, 102);
+}
+.list{
+  position: absolute;
+  width: 100%;
+  bottom: 100rpx;
+  overflow: auto;
+  top: 400rpx;
+}
+.items{
+  margin-bottom: 20rpx;
+}
+
+Page .ok{
+  color:rgb(46, 160, 255) !important;
+}

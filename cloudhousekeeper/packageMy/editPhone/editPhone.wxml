@@ -1,0 +1,32 @@
+<!--packageMy/editPhone/editPhone.wxml-->
+<view class="container">
+  <view class='list'>
+    <i-cell-group>
+      <i-cell i-class="left-icon" title="方法一：使用微信已绑定的手机号" is-link value="去授权"></i-cell>
+    </i-cell-group>
+  </view>
+  <view class='list'>
+    <i-cell-group>
+      <i-cell i-class="left-icon" title="方法二：手动填写"></i-cell>
+    </i-cell-group>
+    <i-cell-group>
+      <view class="input">
+        <view class="l">
+          <input type="number" placeholder="请输入手机号码" slot="input" />
+        </view>
+        <view class="r">
+          <button class="btn" disabled='{{disabled}}' bindtap="getVerificationCode">{{time}}</button>
+        </view>
+      </view>
+    </i-cell-group>
+    <i-cell-group>
+      <view class="input">
+        <input type="number" placeholder="请输入短信验证码" slot="input" />
+      </view>
+    </i-cell-group>
+    <view class="save">
+      <i-button i-class="my-btn" bind:click="save" type="primary" size="large">保存修改</i-button>
+    </view>
+  </view>
+  <i-toast id="toast" />
+</view>

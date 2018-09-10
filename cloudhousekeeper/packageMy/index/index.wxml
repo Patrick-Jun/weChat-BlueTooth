@@ -1,0 +1,13 @@
+<!--packageMy/index/index.wxml-->
+<view class="container">
+  <view class="header">
+    <image class="img" src="http://img5.imgtn.bdimg.com/it/u=3818547025,3657910106&fm=27&gp=0.jpg" lazy-load="true">
+    
+    </image>
+  </view>
+  <view class='list'>
+    <i-cell-group>
+      <i-cell i-class="left-icon" title="手机号码" is-link url="../editPhone/editPhone" value="未设置手机号"></i-cell>
+    </i-cell-group>
+  </view>
+</view>

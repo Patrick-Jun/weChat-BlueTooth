@@ -1,0 +1,17 @@
+<!--package/newSend/index.wxml-->
+<view>
+  <image src='/images/pend/changtiao@2x.png' class='line'></image>
+  <view class='newSend'>
+    <i-input value="" title="姓名" i-class='form' autofocus placeholder="请输入" maxlength='10' bind:change="nameValue" />
+    <view class="stick">智能粘贴</view>
+    <i-input value="" type="number" i-class='form' title="联系电话" placeholder="手机号、固定电话等" bind:change="telValue" />
+    <i-input value="" title="公司名称" i-class='form' placeholder="公司名称(选填)" bind:change="companyValue" />
+    <i-input value="{{province.text1}} {{province.text2}} {{province.text3}}" i-class='form' title="所在地址" placeholder="点击选择" disabled bind:change="provincesValue" bind:tap="openSelectAddress" />
+    <image src='/images/package/ic-dingwei@2x.png' bindtap='openMap'></image>
+    <i-input value="" type="textarea" placeholder="请填写详细地址，不少于5个字" maxlength="50" bind:change="addressValue" />
+  </view>
+  <view class='btn'>
+    <i-button bind:click="handleClick" type="primary" long="true">保存我的寄件信息</i-button>
+  </view>
+  <i-message id="message" />
+</view>

@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "已打包裹",
+  "backgroundColor": "#f5f5f5",
+  "usingComponents": {
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index",
+    "i-cell": "../../dist/cell/index",
+    "i-icon": "../../dist/icon/index",
+    "i-radio": "../../dist/radio/index"
+  },
+  "enablePullDownRefresh": true
+}

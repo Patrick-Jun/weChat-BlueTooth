@@ -1,0 +1,14 @@
+<!--package/intelligentCopy/index.wxml-->
+<view class='copyBox'>
+    <textarea bindinput='interlligent' class='text' placeholder='可将您复制的收件人信息(包括姓名、手机号码、详细地址)一键粘贴在该输入框中' ></textarea>
+    <button class='clean'>全部清除</button>
+
+    <view class='message'>
+        <i-input i-class="left-icon" title="收件姓名:" value="{{name}}" disabled />
+        <i-input i-class="left-icon" title="手机号码:" value="{{tel}}" disabled />
+        <i-input i-class="left-icon" title="所在地区:" value="{{province}}" disabled />
+        <i-input i-class="left-icon" title="详细地址:" value="{{address}}" disabled />
+    </view>
+
+    <button class='sure'>确定</button>
+</view>

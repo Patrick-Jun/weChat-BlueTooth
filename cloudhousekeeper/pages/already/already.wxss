@@ -1,0 +1,356 @@
+/* pages/already/already.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+.topline{
+  width: 100%;
+  height: 6rpx;
+}
+.alreadyTop {
+  width: 100%;
+  margin-top: 1rpx;
+  margin-bottom: 1rpx;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+}
+
+.leftTab {
+  width: 50%;
+  float: left;
+}
+
+.rightTab {
+  width: 50%;
+  float: right;
+  top: 22rpx;
+  position: relative;
+  text-align: right;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+}
+
+.bottomTab {
+  width: 100%;
+  float: left;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 35rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.filter,.batch {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 235rpx;
+}
+.filter .picthon{
+  color: red;
+}
+.batch{
+  left: 0;
+}
+
+.bottomTab image {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+}
+
+.batch image{
+  top: 8rpx;
+  right: 20rpx;
+}
+.filter image {
+  width: 34rpx;
+  height:20rpx;
+  top: 8rpx;
+  left: 20rpx;
+}
+
+.already,.log,.searchBox{
+  width: 100%;
+  position: relative;
+  background: #f5f5f5;
+  font-size: 30rpx;
+  top: 20rpx;
+  /* height: 920rpx; */
+  overflow: auto;
+}
+.noalready{
+  background: #fff;
+  top: 5rpx;
+}
+.searchBox{
+  position: absolute;
+  z-index: 50;
+  top: 200rpx;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.log{
+  width: 100%;
+  position: relative;
+}
+
+.list{
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+}
+.list2{
+  /* margin-bottom: 20rpx; */
+}
+.line{
+  width: 94%;
+  border-top: 1rpx solid #f5f5f5;
+  margin-left: 3%;
+}
+.line2{
+   margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.alreadyBox .tips,.alreadyBox .tip2,.alreadyBox .tip3{
+  padding: 5px 15px;
+  background-color:rgba(255,255,255,0);
+}
+.alreadyBox .tip2,.alreadyBox .tip3{
+  line-height: 0.4;
+}
+.tip3 .cell-index--i-cell-text{
+ 
+}
+.alreadyBox .tip3{
+  padding: 5px 15px 0 15px;
+}
+.alreadyBox .tip3 view,.alreadyBox .tip2 view,.alreadyBox .tip4 view,.alreadyBox .tips view,.alreadyBox .tip5 view{
+  font-size: 14px;
+}
+.alreadyBox .tip4{
+  padding: 0 15px;
+}
+.alreadyBox .tip5{
+  color: #8F8F8F;
+  padding: 0 15px 7px 15px;
+}
+.already .from{
+  position: relative;
+  top: -8rpx;
+}
+.already .from image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  position: relative;
+  top: 14rpx;
+}
+.i-img{
+  width: 49rpx;
+  height: 49rpx;
+}
+
+.share,.check{
+  display:inline-block;
+  font-size: 12px;
+  line-height: 70rpx;
+  border-radius: 5rpx;
+  float: right;
+  margin:25rpx 30rpx 25rpx 0;
+  padding: 0 12px;
+}
+.share{
+  border:1rpx solid rgb(46, 160, 255);
+  color: rgb(46, 160, 255);
+  line-height: 65rpx;
+  background-color: #fff;
+  border-radius: 13rpx;
+}
+.check{
+  border: none;
+  background: rgb(46, 160, 255);
+  color: #fff;
+  outline: none;
+}
+.noMessage{
+  font-size:14px;
+  padding:40rpx 0;
+  color:#A3A3A3;
+  text-align:center;
+  background:#F5F5F5;
+
+}
+.surface{
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+.sign{
+  position: absolute;
+  width: 204rpx;
+  height: 166rpx;
+  top: 38%;
+  right: 35rpx;
+  z-index: 4;
+}
+.printCondition{
+  width: 100%;
+  height: 550rpx;
+  background-color: #fff;
+}
+.printBox{
+   width: 100%;
+  height: 450rpx;
+  overflow: auto;
+  padding: 0 4%;
+  box-sizing: border-box;
+}
+.printTime,.printPlatform,.printType{
+  width: 100%;
+  overflow: hidden;
+}
+.title{
+  margin-top: 30rpx;
+}
+.printCondition .tag,.printCondition .tag1,.printCondition .tag2{
+  width: 30%;
+  line-height: 55rpx;
+  text-align: center;
+  float: left;
+  border: 1rpx solid #E8E8E8;
+  margin: 10rpx 0;
+  border-radius: 5rpx;
+}
+.printCondition .tag1{
+  width: 40%;
+}
+.printCondition .tag2{
+  width: 10%;
+  border: none;
+}
+.printCondition .center{
+  margin: 10rpx 3%;
+}
+.printCondition .none{
+  opacity: 0;
+}
+.printCondition .disalbe{
+  background-color: #f5f5f5;
+  color: #A3A3A3;
+}
+.printCondition .checked{
+  border:1rpx solid red;
+  color: red;
+}
+.btn{
+   width: 100%;
+  height: 100rpx;
+  overflow: auto;
+  padding: 10rpx 3%;
+}
+.btn button{
+  width: 45%;
+  float: left;
+  font-size: 30rpx;
+  color: #fff;
+}
+.noclean{
+  background-color:#C7C7C7;
+}
+.clean{
+  background-color: blue;
+}
+.ok{
+  background-color: red;
+  margin-left: 3%;
+}
+
+.list .tips .cell-index--i-cell-text{
+  color:#B7B7B7;
+}
+.noList{
+   width: 236rpx;
+  height: 320rpx;
+   margin: 50rpx auto;
+    text-align: center;
+}
+.noList image{
+  width: 236rpx;
+  height: 289rpx;
+}
+.noList view{
+  margin-top: 26rpx;
+}
+
+.sendMessage{
+  padding: 0 20px 0 45px;
+  font-size: 14px;
+}
+.sendMessage view{
+  line-height: 52rpx;
+   overflow: hidden;
+}
+
+.sendMessage view .title{
+  color: #8F8F8F;
+   padding-right: 20rpx;
+}
+.sendMessage view .tr{
+  float: right;
+  text-align: right;
+  color: #8F8F8F;
+ 
+}
+.sendMessage view .value{
+  color: #000;
+  padding-left: 20rpx;
+}
+.bottomBtn{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background: #fff;
+  z-index: 50;
+}
+.bottomBtn .btn-left{
+  flex: 3;
+}
+.bottomBtn .btn-right{
+  flex: 7;
+  line-height: 45px;
+  text-align: center;
+  background: rgb(46, 160, 255);
+  color: #fff;
+}
+
+/*  重写 checkbox 样式  */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+  border-radius: 50%;/* 圆角 */
+  width: 40rpx; /* 背景的宽 */
+  height: 40rpx; /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  border: 1rpx solid red;
+  background: red;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 50%;/* 圆角 */
+  width: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size:30rpx; /* 对勾大小 30rpx */
+  color:#fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform:translate(-50%, -50%) scale(1);
+  -webkit-transform:translate(-50%, -50%) scale(1);
+}

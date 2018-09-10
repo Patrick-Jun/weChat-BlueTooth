@@ -1,0 +1,126 @@
+/* pages/already/logistics.wxss */
+page{
+   background: #f5f5f5;
+}
+.listModule{
+  background: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+  line-height: 40rpx;
+  font-size: 32rpx;
+  color: rgb(51, 51, 51);
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.tbottom{
+  padding: 24rpx 0 0 0;
+  overflow: hidden;
+  background: #fff;
+}
+.tModule{
+   padding: 0 30rpx 24rpx 100rpx;
+   box-sizing: border-box;
+   line-height: 40rpx;
+   font-size: 28rpx;
+   color: rgb(102, 102, 102);
+}
+.topline{
+  width: 100%;
+  height: 6rpx;
+  margin-bottom: -6rpx;
+}
+.listModule image{
+  width: 49rpx;
+  height: 40rpx;
+  float: left;
+}
+.listModule .other{
+   height: 49rpx;
+}
+.listModule text{
+  margin-left: 20rpx;
+}
+.tModule text{
+  margin-right: 30rpx;
+}
+.textModule .tit{
+  font-size: 32rpx;
+  color: rgb(51, 51, 51);
+  padding: 5px 15px;
+}
+.line{
+  width: 100%;
+  border-left: 15px solid #fff;
+  border-right:15px solid #fff;
+  height: 1rpx;
+  box-sizing: border-box;
+  background:#f5f5f5;
+}
+
+.steps{
+  padding: 26rpx 30rpx;
+  background: #fff;
+  overflow: hidden;
+  border-top: 1rpx solid #f5f5f5;
+}
+.timeLine{
+  /* border: 1rpx solid red; */
+  position: relative;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+.rLine{
+  position: absolute;
+  border-left: 1rpx solid rgb(191, 191, 191);
+  float: left;
+  height: 100%;
+  margin-top: 30rpx;
+  margin-left: 14rpx;
+}
+.timeLine .step{
+  /* margin: 0 0 20rpx 0; */
+  overflow: hidden;
+}
+.timeLine .rd{
+    float: left;
+    width: 25rpx;
+    height:25rpx;
+    background: rgb(191, 191, 191);
+    border-radius: 50%;
+    margin-right: 30rpx;
+    margin-left: 2rpx;
+    margin-top: 15rpx;
+}
+.timeLine .checkRd{
+  width: 30rpx;
+  height:30rpx;
+  margin-right: 25rpx;
+  margin-left: 0;
+  background: rgb(46, 160, 255);
+  position: relative;
+  z-index: 555;
+}
+.timeLine .stepTitle{
+  float: left;
+  width: 55%;
+  font-size: 32rpx;
+  margin-bottom: 5rpx;
+}
+.timeLine .stepText{
+  float: left;
+  width: 55%;
+  margin-left: 55rpx;
+  font-size: 24rpx;
+  margin-top: 5rpx;
+}
+.timeLine .hBox{
+  width: 100%;
+  height: 45rpx;
+}
+.btn{
+  width: 100%;
+  padding: 33rpx 0;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+  background: rgb(46, 160, 255);
+}

@@ -1,0 +1,21 @@
+<!--pages/blueTooth/index.wxml-->
+<view>
+  <image src='/images/banner1.jpg' class='logo'></image>
+  <view class='hasBluetooth'>
+    <i-cell i-class="tip2" title="搜素到的打印机">
+      <image class='i-img' src="http://img2.imgtn.bdimg.com/it/u=4075250394,790748934&fm=27&gp=0.jpg" slot="icon"></image>
+    </i-cell>
+    <view class='list'>
+      <view class='items' wx:for="{{devices}}"   >
+        <i-cell i-class="tip" title="{{item.devices[0].name}}" value="点击添加" isLink  bind:click="toConnect" data-device="{{item.devices}}" >
+          <image class='i-img' src="http://img2.imgtn.bdimg.com/it/u=4075250394,790748934&fm=27&gp=0.jpg" slot="icon"></image>
+        </i-cell>
+        <view class='line'></view>    
+      </view>
+       <view class='loading' wx:if="{{loading}}">搜索中...</view>
+    </view>
+
+  </view>
+
+  <button class='searchBlueTooth' bindtap='toSearch' >搜索添加打印机</button>
+</view>

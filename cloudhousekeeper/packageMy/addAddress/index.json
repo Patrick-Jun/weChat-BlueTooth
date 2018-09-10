@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "新建收件人",
+    "backgroundColor": "#f5f5f5",
+    "usingComponents": {
+        "i-input": "../../dist/input/index",
+        "i-button": "../../dist/button/index",
+        "i-message": "../../dist/message/index"
+    }
+}

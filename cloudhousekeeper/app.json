@@ -1,0 +1,83 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/new/index",
+    "pages/my/my",
+    "pages/pend/pend",
+    "pages/common/myAddress/index",
+    "pages/common/Addressee/index",
+    "pages/subOrder/index",
+    "pages/already/already",
+    "pages/already/logistics",
+    "pages/template/index",
+    "pages/blueToothlist/index",
+    "pages/partner/index",
+    "pages/already/search",
+    "pages/blueTooth/index"
+  ],
+  "subPackages": [
+    {
+      "root": "package",
+      "pages": [
+        "selectAddress/index",
+        "newSend/index",
+        "choosePartner/index",
+        "faceBill/index",
+        "faceBillApply/index",
+        "already/index",
+        "intelligentCopy/index",
+        "selectUser/index"
+      ]
+    },
+    {
+      "root": "packagePend",
+      "pages": []
+    },
+    {
+      "root": "packageMy",
+      "pages": [
+        "index/index",
+        "editPhone/editPhone",
+        "addAddress/index",
+        "search/index"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#2F97FB",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/ic-home-sy@2x.png",
+        "selectedIconPath": "images/ic-home-shouye@2x.png"
+      },
+      {
+        "pagePath": "pages/pend/pend",
+        "text": "待打包裹",
+        "iconPath": "images/ic-home-normal-daidabaoguo@2x.png",
+        "selectedIconPath": "images/ic-home-selected-daidabaoguo@2x.png"
+      },
+      {
+        "pagePath": "pages/already/already",
+        "text": "已打包裹",
+        "iconPath": "images/ic-home-yidabaoguo@2x.png",
+        "selectedIconPath": "images/ic-home-selected-yidabaoguo@2x.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/ic-home-normal-daidabaoguo@2x.png",
+        "selectedIconPath": "images/ic-home-selected-daidabaoguo@2x.png"
+      }
+    ]
+  }
+}

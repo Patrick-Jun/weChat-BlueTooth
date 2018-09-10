@@ -1,0 +1,117 @@
+/* pages/subOrder/index.wxss */
+.container{
+  background: #F5F5F5;
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  bottom: 0;
+}
+.header{
+  position: relative;
+}
+.bg-header .bg_one{
+  display: block;
+  width: 84%;
+  margin:  0 auto;
+  padding: 30rpx 0;
+  background: rgba(255,255,255,.3);
+  position: absolute;
+  top: 32%;
+  left: 8%;
+  border-radius: 14rpx;
+}
+.bg-header .bg_two{
+  display: block;
+  width: 76%;
+  margin:  0 auto;
+  padding: 60rpx 0;
+  background: rgba(255,255,255,.3);
+  position: absolute;
+  top: 24%;
+  left: 12%;
+  border-radius: 14rpx;
+}
+.bg-header{
+  height: 300rpx;
+  background: -moz-linear-gradient(top, #1583DF 0%, #1C8EE7 100%) ;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1583DF), color-stop(100%,#1C8EE7))  ;
+  background: -webkit-linear-gradient(top, #1583DF 0%,#1C8EE7 100%) ;
+  background: -o-linear-gradient(top, #1583DF 0%,#1C8EE7 100%) ;
+  background: -ms-linear-gradient(top, #1583DF 0%,#1C8EE7 100%) ;
+}
+.content{
+  position: absolute;
+  width: 92%;
+  left: 4%;
+  right: 4%;
+  top: 40%;
+  background: #ffffff;
+  border-radius: 14rpx;
+  box-shadow: 0rpx 10rpx 16rpx rgba(216, 216, 216, 0.5)
+}
+.content .title{
+  border-bottom: 1rpx dashed #B5B5B5;
+  margin: 0 10%;
+  padding: 100rpx 0 40rpx;
+  text-align: center;
+}
+.content .code_img{
+  padding: 40rpx 0 0;
+  text-align: center
+}
+.content .code_img .img{
+  width: 340rpx;
+  height: 340rpx;
+}
+.content .mark{
+  text-align: center;
+  padding: 20rpx 0 40rpx;
+  font-size: 26rpx;
+  color: #59B0FB;
+}
+.content .title_header{
+  background: #ffffff;
+  position: absolute;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 100%;
+  padding: 6rpx;
+  top: -12%;
+  left: 50%;
+  margin-left: -80rpx;
+}
+.content .title_header .img{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+.content .icon{
+  position: absolute;
+  right: 20rpx;
+  top:20rpx;
+}
+
+/* 操作列表 */
+.operation_list{
+  margin-top: 72%;
+}
+/* 画布  转发朋友圈 */
+.mycanvas{
+  position:fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .1)
+}
+.mycanvas .canvas{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 15%;
+  height: 70%;
+  z-index: 1000;
+  border-radius: 12rpx;
+  background: #ffffff
+}

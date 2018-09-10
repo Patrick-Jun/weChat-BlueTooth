@@ -1,0 +1,106 @@
+/* packageMy/myAddress/index.wxss */
+page{
+  overflow: hidden;
+  background: #E6E6E6
+}
+/* 搜索 */
+.search{
+  background: #ffffff;
+  padding: 30rpx 30rpx;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 28rpx;
+  background: #F5F5F5;
+  color: #9A9A9A
+}
+/* 索引列表 */
+.index-list{
+  position: fixed;
+  top:0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #F5F5F5;
+}
+.index-list .index-item-parent{
+  border-bottom:1rpx solid #EFEFEF;
+  background: #ffffff
+}
+.index-list .index-item .css_index_item{
+  margin: 0 30rpx;
+  border-bottom:1rpx solid #F6F6F6;
+  padding: 20rpx;
+  font-size: 34rpx;
+}
+.index-list .index-item:last-child .css_index_item{
+  border-bottom:none;
+} 
+.index-list .index-item .css_index_item .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.index-list .index-item .css_index_item .top .name{
+  /* flex-basis: 40%; */
+  margin-right: 20rpx;
+}
+.index-list .index-item .css_index_item .top .name label{
+  align-items: center;
+}
+.index-list .index-item .css_index_item .top .name .myImg{
+  margin:0 10rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+}
+.index-list .index-item .css_index_item .top .cz{
+  flex-basis: 20%;
+  text-align: right;
+}
+.index-list .index-item .css_index_item .top .cz image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+/* checkbox */
+.index-list .index-item .css_index_item .top .name{
+  display: flex;
+}
+.index-list .index-item .css_index_item .top .name label{
+  display: flex;
+}
+.index-list .index-item .css_index_item .top .name label .key{
+  vertical-align: middle;
+}
+.index-list .index-item .css_index_item .top .name label .val{
+  vertical-align: middle;
+}
+/*  重写 checkbox 样式  */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+  border-radius: 50%;/* 圆角 */
+  width: 40rpx; /* 背景的宽 */
+  height: 40rpx; /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  border: 1rpx solid red;
+  background: red;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 50%;/* 圆角 */
+  width: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size:30rpx; /* 对勾大小 30rpx */
+  color:#fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform:translate(-50%, -50%) scale(1);
+  -webkit-transform:translate(-50%, -50%) scale(1);
+}

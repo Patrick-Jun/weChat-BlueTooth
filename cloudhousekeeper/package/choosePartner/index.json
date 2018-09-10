@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "选择伙伴",
+    "backgroundColor": "#f5f5f5",
+    "usingComponents": {
+      "i-index": "../../dist/index/index",
+      "i-index-item": "../../dist/index-item/index"
+    }
+}

@@ -1,0 +1,12 @@
+{
+  
+  "navigationBarTitleText": "设置手机号",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index",
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index",
+    "i-input": "../../dist/input/index",
+    "i-button": "../../dist/button/index",
+    "i-toast": "../../dist/toast/index"
+  }
+}

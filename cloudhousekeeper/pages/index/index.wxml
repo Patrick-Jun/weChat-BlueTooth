@@ -1,0 +1,83 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='banner'>
+    <image src='/images/banner1.jpg' bindtap='toCopy' ></image>
+  </view>
+  <view class='nav'>
+    <view class='title'>
+      <image src='/images/bg-dikuai@2x.png'></image>
+      <view class='t-l' bindtap='newPack'>
+        <image src='/images/ic-xjbg@2x.png'></image>
+        <view>新建包裹</view>
+      </view>
+      <view class='t-c'>
+        <image src='/images/ic-sys@2x.png'></image>
+        <view>扫一扫</view>
+      </view>
+      <view class='t-r' bindtap="toSubmitOrder">
+        <image src='/images/ic-xdgw@2x.png'></image>
+        <view>下单给我</view>
+      </view>
+    </view>
+    <view class='bar'>
+      <view class='bar-l' bindtap='toFaceBill'>
+        <image src='/images/ic-dianzimiandan@2x.png'></image>
+        <view class='bar-detail'>
+          <view class='bar-title'>电子面单</view>
+          <view class='bar-content'>共有
+            <text>10</text> 笔面单</view>
+        </view>
+      </view>
+      <view bindtap="toAddressee" class='bar-r'>
+        <image src='/images/ic-shoujiandizhi@2x.png'></image>
+        <view class='bar-detail'>
+          <view class='bar-title'>收件地址</view>
+          <view class='bar-content'>您已填写地址</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='bottom' >
+    <view class='bluetooth' wx:if="{{!haveBlueTooth}}">
+      <view class='bluetooth-top'>
+        <image src='/images/ic-lanyadayin@2x.png'></image>
+        <view>蓝牙打印机</view>
+      </view>
+      <view class='bluetooth-bottom'>
+        <view class='bluetooth-b-left'>添加/管理打印机（扫码、搜索均可添加）</view>
+        <view class='bluetooth-b-right'>
+          <image src='/images/ic-gengduo@2x.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='bluetooth' wx:if="{{haveBlueTooth}}">
+      <view class='bluetooth-top'>
+        <image src='/images/ic-lanyadayin@2x.png'></image>
+        <view>蓝牙打印机</view>
+      </view>
+      <view class='bluetooth-list'>
+        <i-cell-group>        
+           <i-cell title="{{item.remark==''?item.name:item.remark}}" is-link i-class="tips" data-index="{{index}}" bindtap="handleOpen2" wx:for="{{blueList}}" wx:key="{{index}}" >
+              <text class='moren' wx:if="{{item.defaultSet}}" >默认</text>
+            </i-cell>                        
+          <i-cell title="添加/管理打印机（扫码、搜索均可添加）" is-link i-class="tips last-tips" url="/pages/blueTooth/index"></i-cell>
+         </i-cell-group> 
+      </view>
+    </view>
+      <view class='about'>
+        <view>云递管家使用协议 隐私权政策</view>
+        <view>Copyright ©2018 上海东普信息科技有限公司</view>
+        <view>云递管家 V1.0</view>
+      </view>
+  </view>
+
+  <i-action-sheet visible="{{ visible2 }}" actions="{{ actions2 }}" show-cancel bind:cancel="handleCancel2" bind:click="handleClickItem2" mask-closable="{{ false }}">
+
+  </i-action-sheet>
+  
+  <i-modal title="编辑打印备注" visible="{{ visible1 }}" bind:ok="handleOk" bind:cancel="handleClose1">
+    <input placeholder='请输入' bindinput='setName' focus:true ></input>
+    
+  </i-modal>
+  <i-message id="message" />
+</view>

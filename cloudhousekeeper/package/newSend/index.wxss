@@ -1,0 +1,40 @@
+/* package/newSend/index.wxss */
+page{
+  background: #f5f5f5;
+}
+.btn{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.stick{
+  color: rgb(46, 160, 255);
+  float: right;
+  font-size: 14px;
+  position: absolute;
+  right: 27rpx;
+  top: 77rpx;
+}
+.newSend{
+  background-color: #fff;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.newSend .form{
+  border-bottom:1px solid #f5f5f5;
+}
+.newSend image{
+  width: 32rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 25rpx;
+  margin-top: -33px;
+}
+.btn .i-btn-primary{
+  background: rgb(46, 160, 255);
+}
+.line{
+  width: 100%;
+  height: 6rpx;
+  margin-bottom: -5rpx;
+}

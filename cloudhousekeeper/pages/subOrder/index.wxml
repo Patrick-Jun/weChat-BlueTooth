@@ -1,0 +1,45 @@
+<!--pages/subOrder/index.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="bg-header">
+      <view class="bg_one"></view>
+      <view class="bg_two"></view>
+    </view>
+    <view class="content">
+      <view class="title_header">
+        <image class="img" src="http://img2.imgtn.bdimg.com/it/u=4075250394,790748934&fm=27&gp=0.jpg"></image>
+      </view>
+      <view bindtap="openStep" class="icon">
+        <i-icon color="#59B0FB" size="28" type="setup" />
+      </view>
+      <view class="title">
+        <text class="">标标标</text>
+      </view>
+      <view class="code_img">
+        <image class="img" src="http://img2.imgtn.bdimg.com/it/u=4075250394,790748934&fm=27&gp=0.jpg"></image>
+      </view>
+      <view class="mark">
+        对方扫此码绑定，即可下单给您，由您打印免单
+      </view>
+    </view>
+  </view>
+  <view class="operation_list">
+    <i-cell-group>
+      <i-cell title="绑定需要验证">
+          <i-switch value="{{switch_a}}" bind:change="bindYzChange" slot="footer"></i-switch>
+      </i-cell>
+      <i-cell title="他人给我下单后微信提示我">
+          <i-switch value="{{switch_b}}" bind:change="bindTsChange" slot="footer"></i-switch>
+      </i-cell>
+      <i-cell title="联系方式" is-link></i-cell>
+      <i-cell title="打单伙伴" url="../partner/index" is-link></i-cell>
+    </i-cell-group>
+  </view>
+  <!-- 画布 -->
+  <view hidden="{{!showCanvas}}" bindtap="hideCanvas" class="mycanvas">
+    <canvas catchtap="stop" class="canvas" canvas-id="mycanvas"></canvas>
+  </view>
+  <!-- 附加组件 -->
+  <i-toast id="toast" />
+  <i-action-sheet visible="{{ visible }}" actions="{{ actions }}" show-cancel bind:cancel="closeStep" bind:click="selectBtn" />
+</view>

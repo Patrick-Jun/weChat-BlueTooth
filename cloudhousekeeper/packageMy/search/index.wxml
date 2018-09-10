@@ -1,0 +1,57 @@
+<!--packageMy/search/index.wxml-->
+<view class="header">
+  <view class="search-input">
+    <input bindfocus="showClear" bindblur="hideClear" value="{{ addrMap }}" bindinput="search" type="text" placeholder="请输入寄件人姓名、电话、地址关键词" />
+    <view hidden="{{ clear }}" bindtap="clear" class="clear"><image src="../../images/clear.png"></image></view>
+  </view>
+</view>
+<view hidden="{{ address }}" class="address">
+  <view class="title">
+    <view class="bbc">
+      地区搜索
+    </view>
+  </view>
+  <view class="content">
+    <view wx:for="{{ addrList }}" wx:key="index" class="list clearfix">
+      <view  class="className">{{ item.className }}：</view>
+      <view class="keyName">
+        <view bindtap="selectAddr" data-name="{{ it }}" wx:for="{{ item.children }}" wx:for-item="it" wx:for-index="in" wx:key="in" class="valName">{{ it }}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 有搜索结果 -->
+<view hidden="{{ result }}" class="res-search">
+  <view class="item">
+    <image style="height:8rpx;width:100%;" src="../../images/pend/changtiao@2x.png"></image>
+    <view class="css_index_item">
+        <view class="top">
+          <text class="name">蔡娟</text>
+          <view class="deft">
+            <view class="badge">
+              默认地址
+            </view>
+          </view>
+          <text class="tel">18911123333</text>
+        </view>
+        <view class="mid">
+          上海 上海市 浦东新区
+        </view>
+        <view class="buttom">
+          <text class="l">上海市浦东新区莲园路738弄55号</text>
+          <view bindtap="openSelect" class="r">
+            <image class="img" src="http://img2.imgtn.bdimg.com/it/u=4075250394,790748934&fm=27&gp=0.jpg"></image>
+          </view>
+        </view>
+      </view>
+  </view>
+</view>
+<!-- 无搜索结果 -->
+<view  wx:if="{{ no_result }}" class="no-res-search">
+  未搜索到想要信息
+</view>
+<i-spin fix wx:if="{{ loading }}" custom>
+  <view>搜索中...</view>  
+</i-spin>
+<i-action-sheet visible="{{ visible }}" actions="{{ actions }}" show-cancel bind:cancel="cancel" bind:click="selectBtn" />
+<i-message id="message" />

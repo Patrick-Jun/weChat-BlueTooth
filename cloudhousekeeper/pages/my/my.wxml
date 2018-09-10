@@ -1,0 +1,54 @@
+<!--pages/my.wxml-->
+<view class="container">
+  <view class='user_header'>
+    <i-row>
+      <i-col span="6" i-class="col-class">
+        <view class='header'>
+          <image class='img' src='http://img5.imgtn.bdimg.com/it/u=3818547025,3657910106&fm=27&gp=0.jpg'></image>
+        </view>
+      </i-col>
+      <i-col span="18" i-class="col-class userInfo">
+        <view >
+          <text class='name'>标标标</text>
+          <view bindtap="goEditUser" class='phone'>
+            <i-icon class='icon' type="brush_fill" size="16" color="#2E9FFC" />  
+            完善个人信息      
+          </view>
+        </view>
+      </i-col>
+    </i-row>
+  </view>
+  <view class='list'>
+    <i-cell-group>
+      <i-cell i-class="left-icon" title="收件地址" is-link url="../common/Addressee/index">
+        <image class='i-img' src="../../images/my/ic-shoujiandizhi@2x.png" slot="icon"></image>
+      </i-cell>
+      <i-cell i-class="left-icon" title="我的地址" is-link url="../common/myAddress/index?pre='my'">
+        <image style="height:55rpx;width:40rpx" class='i-img' src="../../images/my/ic-wodedizhi@2x.png" slot="icon"></image>
+      </i-cell>
+    </i-cell-group>
+  </view>
+
+  <view class='list'>
+    <i-cell-group>
+      <i-cell i-class="left-icon" title="我的打印机" is-link url="../blueTooth/index">
+        <image class='i-img' src="../../images/my/ic-wodedayinji@2x.png" slot="icon"></image>
+      </i-cell>
+      <i-cell i-class="left-icon" title="给他人自助打印" is-link>
+        <image class='i-img' src="../../images/my/ic-geitamenrendayin@2x.png" slot="icon"></image>
+      </i-cell>
+    </i-cell-group>
+  </view>
+
+  <view class='list'>
+    <i-cell-group>
+      <i-cell i-class="left-icon" title="联系客服" bindclick="callPhone" value="400-800-2866">
+        <image class='i-img' src="../../images/my/ic-lianxikefu@2x.png" slot="icon"></image>
+      </i-cell>
+      <i-cell i-class="left-icon" title="关于我们" is-link>
+        <image class='i-img' src="../../images/my/ic-gianyuwomen@2x.png" slot="icon"></image>
+      </i-cell>
+    </i-cell-group>
+  </view>
+</view>
+

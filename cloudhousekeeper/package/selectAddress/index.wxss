@@ -1,0 +1,67 @@
+/* package/selectAddress/index.wxss */
+page{
+  background: #f5f5f5;
+}
+.hotAddress{
+  font-size: 30rpx;
+  overflow: hidden;
+  margin-bottom: 30rpx;
+  background: #fff;
+  padding-bottom: 20rpx;
+}
+.tit{
+  padding:20rpx 0 0 20rpx;
+  color: rgb(51, 51, 51);
+}
+.hot{
+    margin: 30rpx 0 0 4%;
+    float: left;
+    width:27%;
+    border:1px solid #e5e5e5;
+    color: rgb(153, 153, 153);
+    text-align: center;
+    line-height: 45rpx;
+    padding: 5rpx 0;
+}
+
+.allAddress{
+  position: absolute;
+  top: 250rpx;
+  width: 100%;
+  bottom: 0;
+  background: #fff;
+}
+
+.checked{
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 2rpx solid #f5f5f5;
+  font-size: 30rpx; 
+}
+.checked view{
+  float: left;
+  margin:0 20rpx;
+  padding: 30rpx 0;
+}
+.checked .y{
+  border-bottom: 7rpx solid rgb(46, 160, 255);
+}
+.list{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 110rpx;
+  overflow-y: auto;
+}
+.list view{
+  width: 100%;
+  overflow: hidden;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+
+.list .ch{
+  color:rgb(46, 160, 255);
+}

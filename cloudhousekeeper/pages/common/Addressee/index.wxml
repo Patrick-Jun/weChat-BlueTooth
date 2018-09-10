@@ -1,0 +1,57 @@
+<!--packageMy/myAddress/index.wxml  我的地址-->
+
+<view class="index-list">
+  <view class="search">
+    <view bindtap="toSearch" class="input">
+      <input disabled="true" type="text" placeholder="从190个收件人中搜索" />
+      <i-icon size="26" color="#9E9E9E" i-class="my-icon" type="search" />
+    </view>
+    <view bindtap="add" class="add">
+      <image class="add-img" src="../../../images/my/ic-tianjia@2x.png"></image>添加
+    </view>
+  </view>
+  <i-index height="90%" bind:change="onChange">
+      <i-index-item 
+          i-class="index-item-parent"
+          wx:for="{{ cities }}" 
+          wx:for-index="index" 
+          wx:key="{{index}}" 
+          wx:if="{{item.list.length > 0}}"
+          wx:for-item="item" name="{{item.key}}">
+          <image style="height:8rpx;width:100%" class="" src="../../../images/pend/changtiao@2x.png"></image>
+          <view 
+              class="i-index-demo-item index-item" 
+              wx:for="{{item.list}}" 
+              wx:for-index="in" 
+              wx:key="{{in}}" 
+              wx:for-item="it">
+              <view class="css_index_item">
+                <view class="top">
+                  <view class="name">
+                    <label><checkbox name="radios" disabled="{{showBatch}}" hidden="{{showBatch}}" class="key" value="{{in}}"></checkbox><view class="val">蔡娟</view></label>
+                  </view>
+                  <view class="deft">
+                    <view wx:if="{{index == 0 && in == 0}}" class="badge">
+                      默认地址
+                    </view>
+                  </view>
+                  <text class="tel">18911123333</text>
+                </view>
+                <view class="mid">
+                  {{it.name}} 上海市 浦东新区
+                </view>
+                <view class="buttom">
+                  <text class="l">上海市浦东新区莲园路738弄55号</text>
+                  <view bindtap="openSelect" class="r">
+                    <image class="img" src="http://img2.imgtn.bdimg.com/it/u=4075250394,790748934&fm=27&gp=0.jpg"></image>
+                  </view>
+                </view>
+              </view>
+          </view>
+    </i-index-item>
+    <i-index-item name="亲，没有数据了～" style="text-align:center;padding:20rpx 0;"></i-index-item>
+  </i-index>
+  <i-spin size="large" fix wx:if="{{ spinShow }}"></i-spin>
+</view>
+<i-action-sheet visible="{{ visible }}" actions="{{ actions }}" show-cancel bind:cancel="cancel" bind:click="selectBtn" />
+<i-message id="message" />

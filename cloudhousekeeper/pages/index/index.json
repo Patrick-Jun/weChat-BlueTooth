@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "云递管家",
+  "backgroundColor": "#f5f5f5",
+  "usingComponents": {
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index",
+    "i-action-sheet": "../../dist/action-sheet/index",
+    "i-message": "../../dist/message/index",
+    "i-modal": "../../dist/modal/index"
+  }
+}

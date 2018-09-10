@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "电子面单账号",
+    "backgroundColor": "#f5f5f5",
+    "usingComponents": {
+      "i-action-sheet": "../../dist/action-sheet/index",
+      "i-input": "../../dist/input/index",
+      "i-cell": "../../dist/cell/index"
+    }
+}

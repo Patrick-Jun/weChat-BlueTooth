@@ -1,0 +1,37 @@
+<!--package/faceBill/index.wxml-->
+<view class="faceBillBox">
+  <view class='boxTop'>
+    <view wx:if="{{!hasBill}}">
+      <image src='/images/banner1.jpg' class='banner'></image>
+      <view class='noBill'>
+        <image src='/images/ic-lanyadayin@2x.png' class='warning'></image>
+        <text>您还没有电子面单账号</text>
+      </view>
+      <view class='menu'>
+        <view class='tip'>可以通过以下方法添加电子面单:</view>
+        <view class='tips'>·添加菜鸟面单账号(支持25家快递公司)</view>
+        <button>马上添加</button>
+        <!-- <view class='tips'>·添加快递网点账号(未开通敬请期待)</view>
+        <button>马上添加</button> -->
+      </view>
+    </view>
+
+    <view wx:if="{{hasBill}}">
+      <i-cell i-class="overBill" title="已授权电子面单"  ></i-cell>
+      <view class='list'>
+        <i-cell i-class="left-icon" title="菜鸟main但账户-淘宝-标标标" value=""  isLink="true">
+            <view class='default'>默认</view>
+        </i-cell>
+        <i-input i-class="left-icon" title="快递公司:" value="韵达快递" disabled>
+        </i-input>
+        <i-input i-class='form'  title="网店名称:" value="浙江市场部-服务后勤组"  disabled />
+          <i-cell i-class="left-icon" title="1000" value="对账单"  isLink="true">
+              <view slot="icon">面单数量:</view>
+          </i-cell>
+      </view>
+    </view>
+  </view>
+
+  <button class='add' type='ghost' bindtap="handleOpen1">添加电子面单账号</button>
+  <i-action-sheet visible="{{ visible1 }}" actions="{{ actions1 }}" show-cancel bind:cancel="handleCancel1" bind:click="handleClickItem1" />
+</view>
