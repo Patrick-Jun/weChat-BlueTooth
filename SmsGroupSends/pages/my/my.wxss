@@ -1,0 +1,61 @@
+/* pages/my/my.wxss */
+.myPage{
+  width: 100%;
+}
+.top{
+   width: 100%;
+   height:360rpx;
+   background-color: #1f9eff;
+   /* text-align: center;  */
+}
+.headIcon{
+  width: 200rpx;
+  height:200rpx;
+  margin: 0 auto; 
+  border-radius: 50%;
+  border:10rpx solid #fff; 
+  /* background: red; */
+}
+.headIcon image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.name,.tel{
+  position: relative;
+  width: 750rpx;
+  text-align: center;
+  margin: 5rpx 0;
+  color:#E9E8E8;
+}
+.list{
+  line-height: 98rpx;
+  padding: 0 25rpx;
+  background: #fff;
+  display: flex;
+}
+.icon{
+  flex: 2;
+  width: 48rpx;
+  height: 48rpx;
+  margin: 24rpx 20rpx;
+}
+.right{
+  flex: 0.6;
+  width: 21rpx;
+  height: 36rpx;
+  padding:5rpx 10rpx; 
+  box-sizing: border-box;
+  margin: 30rpx;
+}
+.tit{
+  flex: 20;
+  font-size: 36rpx;
+  color:#676666;
+}
+.line{
+  margin-top: 10rpx;
+}
+.line2{
+  margin-top: 3rpx;
+}

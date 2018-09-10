@@ -1,0 +1,34 @@
+/**app.wxss**/
+
+page {
+  width: 100%;
+  height:100%;
+   background-color:#eee;     
+  font-family: -apple-system-font, "Helvetica Neue", Helvetica, sans-serif;    
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.no_message{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #EEEEEE; 
+}
+.no_message image{
+  width: 342rpx;
+  height: 332rpx;
+  margin: 148rpx 0 0 206rpx;
+}
+.no_message view{
+  text-align: center;
+  font-size: 28rpx;
+  margin-top: 15rpx;
+}

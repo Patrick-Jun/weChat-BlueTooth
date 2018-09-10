@@ -1,0 +1,13 @@
+<!--pages/guide/index.wxml-->
+<!--引导页  -->
+<view class='homeMain'>
+   <image src='/images/008.png'></image>
+   <view class='box'>
+      <!-- <open-data type="userAvatarUrl"></open-data>
+      <open-data type="userNickName"></open-data>  -->
+      <view class='aBox'>
+        <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">去授权</button>
+      </view>   
+      <!-- <span style="font-size:14px;"><button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">1231</button></span>   -->
+   </view>  
+</view>

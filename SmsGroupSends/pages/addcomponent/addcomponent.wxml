@@ -1,0 +1,40 @@
+<!--pages/addcomponent/addcomponent.wxml-->
+<view>
+  <view class='title'>
+    <view class='text'>模板标题：</view>
+    <view class='input'>
+      <input type='text' placeholder='请输入模板标题' bindinput='setTitle' value='{{templateName}}' />
+    </view>
+  </view>
+  <view class='context'>
+    <view class='area'>
+      <textarea placeholder='您的快递到了，在橡树湾南门韵达快递，请及时 来取，取件码{取件码}，电话：18930135252' bindinput='count' value='{{templateContent}}'></textarea>
+    </view>
+    <view class='ad'>
+      <view style='color:#000' bindtap='adp'>插入取件码</view>
+    </view>
+    <view class='tj'>
+      <view>字</view>
+      <view style='color:#F90808'>{{numberWords}}</view>
+      <view>共</view>
+    </view>
+  </view>
+  <view class='sign'>
+    <view class='signtext'>短信签名：</view>
+    <view class='signinput'>
+      <input type='text' placeholder='请输入短信签名' bindinput='setSign' value='{{signature}}' ></input>
+    </view>
+  </view>
+  <view class='btn'>
+    <button bindtap='save'>保存</button>
+  </view>
+
+  <view class='explain'>
+    <view style='color:#333333'>友情提示:</view>
+    <view>1、短信签名会显示在短信内容的前面。</view>
+    <view>2、短信内容必须包含取件时间、地点和联系电话。</view>
+    <view>3、短信内容超过70字将双倍计费，包含取件码长度。</view>
+    <view>4、占位符{取件码}发送后替换为生成的取件码。</view>
+    <view>5、如果不使用取件码可以删除。</view>
+  </view>
+</view>

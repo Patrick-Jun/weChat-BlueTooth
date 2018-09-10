@@ -1,0 +1,21 @@
+/* pages/addNumber/addnumber.wxss */
+.text{
+  width: 100%;
+  height: 400rpx;
+  font-size: 33rpx;
+  background: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.btn{
+  width: 90%;
+  border-radius: 20rpx;
+  margin-top: 40rpx;
+  color: #fff;
+  background-color: #1f9eff;
+}
+.explain{
+  width: 100%;
+  font-size: 33rpx;
+  padding: 50rpx 0 0 70rpx;
+}

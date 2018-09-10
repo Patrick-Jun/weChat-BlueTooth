@@ -1,0 +1,36 @@
+/* pages/status/status.wxss */
+/* @import '/components/accept/accept.wxss'; */
+/* .status-box{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.swiper-tab{
+    width: 100%;
+    border-bottom: 2rpx solid #2F97FB;
+    text-align: center;
+    height: 93rpx;
+    line-height: 93rpx;
+    font-size: 30rpx;
+}
+.swiper-tab-item{
+    display: inline-block;
+    width: 33.3%;
+    color:#000;
+}
+.active{
+    color:#fff;
+    background: #2F97FB;
+}
+
+.swiperList{
+  position:absolute;
+  width: 100%;
+  top:99rpx;
+  bottom:0;
+  height: 100%;
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+} */

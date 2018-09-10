@@ -1,0 +1,13 @@
+<!--pages/addNumber/addnumber.wxml-->
+<view>
+    <textarea placeholder='请输入或粘贴手机号码，可用逗号分隔。' class='text' maxlength='-1' bindinput='record' value='{{value}}' show-confirm-bar='true' adjust-position='true' >
+    </textarea>
+    <button bindtap='sumbit' class='btn'>确认导入</button>
+
+    <view class='explain'>
+      <view>说明</view>
+      <view>1、多个号码之间自动使用逗号分隔;</view>
+      <view>2、导入后会自动生成取件码;</view>
+      <view>3、导入后错误的号码会用红色标记出;</view>
+    </view> 
+</view>

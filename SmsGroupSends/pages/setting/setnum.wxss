@@ -1,0 +1,117 @@
+/* pages/setting/setnum.wxss */
+.section_gap{
+  width: 100%;
+  font-size: 28rpx;
+  display: flex;
+  line-height: 88rpx;
+  box-sizing: border-box;
+  padding-left: 29rpx;
+  background: #fff;
+}
+.section__title{
+  flex:8;
+}
+.section_gap switch{
+  flex: 2;
+}
+.title{
+  padding: 39rpx 10rpx 15rpx 25rpx;
+  font-size: 30rpx;
+}
+.prefix{
+  padding: 22rpx 22rpx;
+  background: #fff;
+  display: flex;
+  margin-bottom: 3rpx;
+}
+.prefix .text{
+  flex: 2;
+  font-size:28rpx; 
+  line-height: 42rpx;
+}
+.prefix .vla{
+  flex: 18;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+.prefix .init{
+  font-size:28rpx;
+  margin-top: -6rpx;
+}
+.prefix image{
+  flex: 1;
+  width: 32rpx;
+  height: 18rpx;
+  margin: 13rpx 0 0 0;
+}
+.prefix.vl .text{
+  flex: 3;
+}
+.bg{
+  width: 70%;
+  margin-left: 15%;
+  font-size:36rpx; 
+  background-color: #2F97FB;
+  color: #fff;
+  line-height: 78rpx;
+  margin-top: 44rpx;
+}
+.prefix-box{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 555;
+  padding-top: 40%;
+  
+}
+.prefix-num{
+  width: 86%;
+  margin-left: 7%;
+  overflow: hidden;
+  background: #fff;
+}
+.it{
+  background: #fff;
+  border-right: 0.25rpx solid #E5E5E5;
+  border-bottom: 0.25rpx solid #E5E5E5;
+  width: 16.6%;
+  box-sizing: border-box;
+  padding: 15rpx 0;
+  float: left;
+  text-align: center;
+  font-size: 36rpx;
+}
+.it2{
+  border-right: 0;
+}
+.active{
+  background: #3A7FFF;
+  color: #fff;
+  box-sizing: border-box;
+}
+.fix .f{
+  width: 100%;
+  line-height: 85rpx;
+  font-size: 28rpx;
+  padding-left: 66rpx;
+  background: #fff;
+  border-bottom: 1px solid #E9E8E8;
+  text-align: left;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.fix view text{
+  float: left;
+}
+.fix image{
+   display: none; 
+   width: 32rpx;
+   height: 32rpx;
+   float: right;
+   margin: 22rpx 15rpx 0 0;
+}
+.fix .active2 image{
+   display: block;
+}

@@ -1,0 +1,85 @@
+<!--首页  -->
+<view class='homeMain'>
+  <!-- <view class='box111'></view> -->
+  <image class='header_bg' src='/images/header_bg.png'></image>
+   <view class='content'> 
+  <view class='inputContainer'>
+    <view class='inputContent'>
+      <input placeholder='请输入取件码/手机号码' maxlength='11' type='text' confirm-type='search' bindconfirm = 'search' ></input>
+      <image class='voice' src='/images/voice_input.png'></image>
+      <!-- <image class='scan' src='/images/scanning_input.png'></image> -->
+    </view>
+  </view>
+  <view class='headNav'>
+    <view class='navItem' data-status='0' bindtap='toStatus' >
+      <view class='count'>
+        <text>{{todaySend}}</text>
+      </view>
+      <view class='textFont'>
+        <text>今日发送</text>
+      </view>
+    </view>
+    <view class='navItem' data-status='1' bindtap='toStatus'>
+      <view class='count'>
+        <text>{{notifySuccessful}}</text>
+      </view>
+      <view class='textFont'>
+        <text>通知成功</text>
+      </view>
+    </view>
+    <view class='navItem' data-status='2' bindtap='toStatus'>
+      <view class='count'>
+        <text>{{notifyFailure}}</text>
+      </view>
+      <view class='textFont'>
+        <text>通知失败</text>
+      </view>
+    </view>
+    <!-- <view class='navItem' data-status='3' style='border-right:none;' bindtap='toStatus' >
+      <view class='count'>
+        <text>{{userResponse}}</text>
+      </view>
+      <view class='textFont'>
+        <text>用户回复</text>
+      </view>
+    </view> -->
+  </view>
+  </view>
+  <view class='middleContainer'>
+    <view class='middle-top'>
+      <view class='topItem' style='border-right:1px solid #eee;' bindtap='toNotice'  >
+        <image class='itemImg' src='/images/message.png'></image>
+        <view>
+          <text>群发通知</text>
+        </view>
+      </view>
+      <view class='topItem' bindtap='call'>
+        <image class='itemImg' src='/images/telephone.png'></image>
+        <view>
+          <text>打电话</text>
+        </view>
+      </view>
+    </view>
+    <view class='middleBottom'>
+     <view class='bottomItem' style='border-right:1px solid #eee;' bindtap='toTemplate' >
+       <image class='itemImg' src='/images/sms_templat.png'></image>
+        <view>
+          <text>短信模板</text>
+        </view>
+     </view> 
+     <view class='bottomItem' style='border-right:1px solid #eee;' bindtap='toStatus' data-status='0' >
+       <image class='itemImg' src='/images/message_status.png'></image>
+        <view>
+          <text>通知状态</text>
+        </view>
+     </view>
+     <view class='bottomItem' bindtap='toHelpMe' >
+       <image class='itemImg' src='/images/use_help.png'></image>
+        <view>
+          <text>使用帮助</text>
+        </view>
+     </view>
+    </view>
+  </view>
+  <!-- </view> -->
+</view>

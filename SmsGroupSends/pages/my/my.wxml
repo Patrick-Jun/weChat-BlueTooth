@@ -1,0 +1,23 @@
+<!--pages/my/my.wxml-->
+<!--我的  -->
+<view class='myPage'>
+  <view class='top'>
+    <view class='headIcon'>
+      <image src='{{userInfo.avatarUrl}}'></image>
+    </view>
+  <!-- <image src='{{userInfo.avatarUrl}}' ></image>  -->
+<view class='name'>
+  <text>{{userInfo.nickName}}</text>
+</view>
+<view class='tel'>
+  <text>{{telephone}}</text>
+</view>
+</view>
+<view class='bottom'>
+  <view wx:for="{{tips}}" class='list {{item.line}}' wx:key='{{item.index}}' bindtap='link' data-item='{{item}}'>
+    <image src="{{item.icon}}" class='icon'></image>
+    <text class='tit'>{{item.title}}</text>
+    <image src='../../images/right.png' class='icon right'></image>
+  </view>
+</view>
+</view>

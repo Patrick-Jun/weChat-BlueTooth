@@ -1,0 +1,14 @@
+/* pages/help/help.wxss */
+@import "/wxParse/wxParse.wxss";
+.boxhtml{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+.wxParse{
+  background-color: #fff;
+}

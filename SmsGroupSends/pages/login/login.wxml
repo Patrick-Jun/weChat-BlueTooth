@@ -1,0 +1,23 @@
+<!--pages/login/login.wxml-->
+<!--登录页  -->
+<view class='loginBox'>
+    <image class='logo' src='/images/sign_logo.png'></image>
+    <view class='tel'>
+      <image class='telLogo' src='/images/telephone_icon.png'></image>
+      <input class='telInput' type='number' placeholder='请输入手机号' placeholder-class="phcolor" bindinput='setTelphone' maxlength='11' disabled='{{cluntDown.type==2?"true":""}}' ></input>
+      <button type='' class='getYzm {{cluntDown.type==0?"":"yzmActive"}}'  bindtap='getCode' disabled="{{cluntDown.type==2?'true':''}}" >{{cluntDown.str}}</button>
+    </view>
+    <view class='yzm'>
+        <image class='keyLogo' src='/images/verification_code.png'></image>
+        <input class='telInput' type='number' placeholder='请输入验证码' placeholder-class="phcolor" bindinput='setCode'  ></input>
+      </view>
+        <button class='loginin {{btnType?"loginActive":""}}' bindtap='userLogin'>登录</button>
+
+        <view>
+            <!-- <button type="primary"bindtap="showok">消息提示框</button>   
+            <button type="primary"bindtap="modalcnt">模态弹窗</button>   
+            <button type="primary"bindtap="actioncnt">操作菜单</button>    -->
+        </view>
+</view>
+
+
